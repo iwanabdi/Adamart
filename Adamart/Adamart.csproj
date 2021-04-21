@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -95,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\pos_sep.sql" />
+    <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.63332513154187965730661.png" />
+    <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.6333251315418796573066.png" />
+    <None Include="Resources\bmEaQEIBflIEO9deCWDA-removebg-preview.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\hamburger-menu-icon-transparent-4.jpg" />
+    <None Include="Resources\icon-menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
