@@ -87,5 +87,16 @@ namespace Adamart
                 txt_email.Focus();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lbl_clear_Click(object sender, EventArgs e)
+        {
+            txt_email.ResetText();
+            txt_pass.ResetText();
+        }
     }
 }

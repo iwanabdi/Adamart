@@ -106,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\pos_sep.sql" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\img_398183.png" />
     <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.63332513154187965730661.png" />
     <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.6333251315418796573066.png" />
     <None Include="Resources\bmEaQEIBflIEO9deCWDA-removebg-preview.png" />

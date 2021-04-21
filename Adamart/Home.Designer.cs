@@ -42,7 +42,6 @@ namespace Adamart
             this.jdl_pembelian = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_nama = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_admin = new System.Windows.Forms.Panel();
             this.jdl_admin = new System.Windows.Forms.Label();
             this.panel_stok = new System.Windows.Forms.Panel();
@@ -50,26 +49,27 @@ namespace Adamart
             this.panel_report = new System.Windows.Forms.Panel();
             this.jdl_report = new System.Windows.Forms.Label();
             this.btn_stok = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_kiri.SuspendLayout();
             this.panel_atas.SuspendLayout();
             this.panel_pembelian.SuspendLayout();
             this.panel_penjualan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_admin.SuspendLayout();
             this.panel_stok.SuspendLayout();
             this.panel_report.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_kiri
             // 
-            this.panel_kiri.BackColor = System.Drawing.Color.Maroon;
-            this.panel_kiri.Controls.Add(this.pictureBox1);
+            this.panel_kiri.BackColor = System.Drawing.Color.Aquamarine;
             this.panel_kiri.Controls.Add(this.panel_button);
             this.panel_kiri.Controls.Add(this.btn_stok);
             this.panel_kiri.Controls.Add(this.btn_pembelian);
             this.panel_kiri.Controls.Add(this.btn_report);
             this.panel_kiri.Controls.Add(this.btn_admin);
             this.panel_kiri.Controls.Add(this.btn_penjualan);
+            this.panel_kiri.Controls.Add(this.pictureBox1);
             this.panel_kiri.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_kiri.Location = new System.Drawing.Point(0, 0);
             this.panel_kiri.Name = "panel_kiri";
@@ -78,12 +78,12 @@ namespace Adamart
             // 
             // btn_report
             // 
-            this.btn_report.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_report.BackColor = System.Drawing.Color.Teal;
             this.btn_report.FlatAppearance.BorderSize = 0;
             this.btn_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_report.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_report.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_report.Location = new System.Drawing.Point(0, 256);
+            this.btn_report.Location = new System.Drawing.Point(0, 266);
             this.btn_report.Name = "btn_report";
             this.btn_report.Size = new System.Drawing.Size(151, 34);
             this.btn_report.TabIndex = 7;
@@ -93,12 +93,12 @@ namespace Adamart
             // 
             // btn_admin
             // 
-            this.btn_admin.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_admin.BackColor = System.Drawing.Color.Teal;
             this.btn_admin.FlatAppearance.BorderSize = 0;
             this.btn_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_admin.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_admin.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_admin.Location = new System.Drawing.Point(0, 216);
+            this.btn_admin.Location = new System.Drawing.Point(0, 226);
             this.btn_admin.Name = "btn_admin";
             this.btn_admin.Size = new System.Drawing.Size(151, 34);
             this.btn_admin.TabIndex = 5;
@@ -108,12 +108,12 @@ namespace Adamart
             // 
             // btn_penjualan
             // 
-            this.btn_penjualan.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_penjualan.BackColor = System.Drawing.Color.Teal;
             this.btn_penjualan.FlatAppearance.BorderSize = 0;
             this.btn_penjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_penjualan.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_penjualan.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_penjualan.Location = new System.Drawing.Point(-2, 136);
+            this.btn_penjualan.Location = new System.Drawing.Point(0, 146);
             this.btn_penjualan.Name = "btn_penjualan";
             this.btn_penjualan.Size = new System.Drawing.Size(151, 34);
             this.btn_penjualan.TabIndex = 3;
@@ -123,20 +123,20 @@ namespace Adamart
             // 
             // panel_button
             // 
-            this.panel_button.BackColor = System.Drawing.Color.DeepPink;
-            this.panel_button.Location = new System.Drawing.Point(0, 96);
+            this.panel_button.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel_button.Location = new System.Drawing.Point(3, 106);
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(12, 34);
             this.panel_button.TabIndex = 2;
             // 
             // btn_pembelian
             // 
-            this.btn_pembelian.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_pembelian.BackColor = System.Drawing.Color.Teal;
             this.btn_pembelian.FlatAppearance.BorderSize = 0;
             this.btn_pembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pembelian.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pembelian.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_pembelian.Location = new System.Drawing.Point(-1, 96);
+            this.btn_pembelian.Location = new System.Drawing.Point(0, 106);
             this.btn_pembelian.Name = "btn_pembelian";
             this.btn_pembelian.Size = new System.Drawing.Size(151, 34);
             this.btn_pembelian.TabIndex = 0;
@@ -146,7 +146,7 @@ namespace Adamart
             // 
             // panel_atas
             // 
-            this.panel_atas.BackColor = System.Drawing.Color.DeepPink;
+            this.panel_atas.BackColor = System.Drawing.Color.Teal;
             this.panel_atas.Controls.Add(this.lbl_nama);
             this.panel_atas.Controls.Add(this.btn_logout);
             this.panel_atas.Location = new System.Drawing.Point(150, 0);
@@ -193,15 +193,15 @@ namespace Adamart
             // 
             // btn_logout
             // 
-            this.btn_logout.BackColor = System.Drawing.Color.DeepPink;
+            this.btn_logout.BackColor = System.Drawing.Color.Teal;
             this.btn_logout.FlatAppearance.BorderSize = 0;
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btn_logout.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_logout.Location = new System.Drawing.Point(577, 3);
+            this.btn_logout.Location = new System.Drawing.Point(577, 0);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(73, 25);
+            this.btn_logout.Size = new System.Drawing.Size(73, 31);
             this.btn_logout.TabIndex = 2;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = false;
@@ -210,21 +210,12 @@ namespace Adamart
             // lbl_nama
             // 
             this.lbl_nama.AutoSize = true;
-            this.lbl_nama.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nama.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nama.ForeColor = System.Drawing.Color.White;
             this.lbl_nama.Location = new System.Drawing.Point(6, 6);
             this.lbl_nama.Name = "lbl_nama";
-            this.lbl_nama.Size = new System.Drawing.Size(0, 19);
+            this.lbl_nama.Size = new System.Drawing.Size(0, 17);
             this.lbl_nama.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Adamart.Properties.Resources.bmEaQEIBflIEO9deCWDA_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // panel_admin
             // 
@@ -285,18 +276,28 @@ namespace Adamart
             // 
             // btn_stok
             // 
-            this.btn_stok.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_stok.BackColor = System.Drawing.Color.Teal;
             this.btn_stok.FlatAppearance.BorderSize = 0;
             this.btn_stok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stok.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stok.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_stok.Location = new System.Drawing.Point(0, 176);
+            this.btn_stok.Location = new System.Drawing.Point(0, 186);
             this.btn_stok.Name = "btn_stok";
             this.btn_stok.Size = new System.Drawing.Size(151, 34);
             this.btn_stok.TabIndex = 10;
             this.btn_stok.Text = "Stok";
             this.btn_stok.UseVisualStyleBackColor = false;
             this.btn_stok.Click += new System.EventHandler(this.btn_stok_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Adamart.Properties.Resources.bmEaQEIBflIEO9deCWDA_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
@@ -310,6 +311,7 @@ namespace Adamart
             this.Controls.Add(this.panel_penjualan);
             this.Controls.Add(this.panel_atas);
             this.Controls.Add(this.panel_kiri);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -321,13 +323,13 @@ namespace Adamart
             this.panel_pembelian.PerformLayout();
             this.panel_penjualan.ResumeLayout(false);
             this.panel_penjualan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_admin.ResumeLayout(false);
             this.panel_admin.PerformLayout();
             this.panel_stok.ResumeLayout(false);
             this.panel_stok.PerformLayout();
             this.panel_report.ResumeLayout(false);
             this.panel_report.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
