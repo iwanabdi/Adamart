@@ -10,7 +10,7 @@ namespace Adamart
     {
         public string conn()
         {
-            return "Host=localhost;Uid=root;Pwd=;database=pos_sep;";
+            return "Host=153.92.9.15;Uid=u3657402_adamart;Pwd=adamart;database=u3657402_adamart;";
         }
     }
 }
