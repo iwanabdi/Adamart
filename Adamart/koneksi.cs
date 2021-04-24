@@ -10,7 +10,7 @@ namespace Adamart
     {
         public string conn()
         {
-            return "Host=192.168.218.70;Uid=root;Pwd=;database=pos_sep;";
+            return "Host=192.168.218.70;Uid=test;Pwd=;database=pos_sep;";
         }
     }
 }
