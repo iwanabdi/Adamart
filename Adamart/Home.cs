@@ -15,8 +15,17 @@ namespace Adamart
         public Home(string nama_pegawai, string id, int jabatan)
         {
             InitializeComponent();
-            MessageBox.Show("ID Pegawai yang Login : " + id.ToString());
-            MessageBox.Show("Jabatang : " + jabatan);
+            //MessageBox.Show("ID Pegawai yang Login : " + id.ToString());
+            string jbt;
+            if (jabatan == 1)
+            {
+                jbt = "Manager";
+            }
+            else
+            {
+                jbt = "Admin";
+            }
+            MessageBox.Show("Selamat Datang " + jbt);
             if (id.ToString() != "1")
             {
                 btn_supplier.Visible = false;

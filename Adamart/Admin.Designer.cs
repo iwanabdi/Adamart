@@ -49,19 +49,19 @@ namespace Adamart
             this.panel_atas = new System.Windows.Forms.Panel();
             this.panel_kiri = new System.Windows.Forms.Panel();
             this.panel_bawah = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_tengah = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel_atas.SuspendLayout();
             this.panel_kiri.SuspendLayout();
             this.panel_bawah.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel_tengah.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel_tengah);
             this.panel1.Controls.Add(this.panel_bawah);
             this.panel1.Controls.Add(this.panel_kiri);
             this.panel1.Controls.Add(this.panel_atas);
@@ -250,15 +250,15 @@ namespace Adamart
             this.panel_bawah.Size = new System.Drawing.Size(527, 29);
             this.panel_bawah.TabIndex = 26;
             // 
-            // panel2
+            // panel_tengah
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(273, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel2.Size = new System.Drawing.Size(527, 361);
-            this.panel2.TabIndex = 27;
+            this.panel_tengah.Controls.Add(this.dataGridView1);
+            this.panel_tengah.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_tengah.Location = new System.Drawing.Point(273, 60);
+            this.panel_tengah.Name = "panel_tengah";
+            this.panel_tengah.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel_tengah.Size = new System.Drawing.Size(527, 361);
+            this.panel_tengah.TabIndex = 27;
             // 
             // dataGridView1
             // 
@@ -287,7 +287,7 @@ namespace Adamart
             this.panel_kiri.ResumeLayout(false);
             this.panel_kiri.PerformLayout();
             this.panel_bawah.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panel_tengah.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -315,7 +315,7 @@ namespace Adamart
         private System.Windows.Forms.Panel panel_bawah;
         private System.Windows.Forms.Panel panel_kiri;
         private System.Windows.Forms.Panel panel_atas;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_tengah;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
