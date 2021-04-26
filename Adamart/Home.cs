@@ -19,6 +19,7 @@ namespace Adamart
             MessageBox.Show("Jabatang : " + jabatan);
             if (id.ToString() != "1")
             {
+                btn_supplier.Visible = false;
                 btn_admin.Visible = false;
                 btn_report.Visible = false;
             }
@@ -39,6 +40,11 @@ namespace Adamart
             panel_stok.Visible = false;
             panel_admin.Visible = false;
             panel_report.Visible = false;
+            panel_supplier.Visible = false;
+            Pembelian page_pembelian = new Pembelian();
+            page_pembelian.TopLevel = false;
+            panel_pembelian.Controls.Add(page_pembelian);
+            page_pembelian.Show();
         }
 
         private void btn_penjualan_Click(object sender, EventArgs e)
@@ -50,6 +56,11 @@ namespace Adamart
             panel_stok.Visible = false;
             panel_admin.Visible = false;
             panel_report.Visible = false;
+            panel_supplier.Visible = false;
+            Penjualan page_penjualan = new Penjualan();
+            page_penjualan.TopLevel = false;
+            panel_penjualan.Controls.Add(page_penjualan);
+            page_penjualan.Show();
         }
 
         private void btn_stok_Click(object sender, EventArgs e)
@@ -61,6 +72,11 @@ namespace Adamart
             panel_stok.Visible = true;
             panel_admin.Visible = false;
             panel_report.Visible = false;
+            panel_supplier.Visible = false;
+            Stok page_stok = new Stok();
+            page_stok.TopLevel = false;
+            panel_stok.Controls.Add(page_stok);
+            page_stok.Show();
         }
 
         private void btn_admin_Click(object sender, EventArgs e)
@@ -72,6 +88,11 @@ namespace Adamart
             panel_stok.Visible = false;
             panel_admin.Visible = true;
             panel_report.Visible = false;
+            panel_supplier.Visible = false;
+            Admin page_admin = new Admin();
+            page_admin.TopLevel = false;
+            panel_admin.Controls.Add(page_admin);
+            page_admin.Show();
         }
 
         private void btn_report_Click(object sender, EventArgs e)
@@ -83,6 +104,25 @@ namespace Adamart
             panel_stok.Visible = false;
             panel_admin.Visible = false;
             panel_report.Visible = true;
+            Report page_report = new Report();
+            page_report.TopLevel = false;
+            panel_report.Controls.Add(page_report);
+            page_report.Show();
+        }
+        private void btn_supplier_Click(object sender, EventArgs e)
+        {
+            panel_button.Height = btn_supplier.Height;
+            panel_button.Top = btn_supplier.Top;
+            panel_pembelian.Visible = false;
+            panel_penjualan.Visible = false;
+            panel_stok.Visible = false;
+            panel_admin.Visible = false;
+            panel_report.Visible = false;
+            panel_supplier.Visible = true;
+            Supplier page_supplier = new Supplier();
+            page_supplier.TopLevel = false;
+            panel_supplier.Controls.Add(page_supplier);
+            page_supplier.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,6 +130,16 @@ namespace Adamart
             this.Close();
             Login page_login = new Login();
             page_login.Show();
+        }
+
+        private void panel_pembelian_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_penjualan_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn_penjualan.BackColor = Color.Brown;
         }
     }
 }

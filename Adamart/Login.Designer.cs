@@ -32,15 +32,17 @@ namespace Adamart
             this.lbl_email = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_clear = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,9 +60,10 @@ namespace Adamart
             // 
             // txt_email
             // 
-            this.txt_email.BackColor = System.Drawing.Color.Aquamarine;
+            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.Color.White;
             this.txt_email.Location = new System.Drawing.Point(51, 232);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
@@ -69,29 +72,15 @@ namespace Adamart
             // 
             // txt_pass
             // 
-            this.txt_pass.BackColor = System.Drawing.Color.Aquamarine;
+            this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.Location = new System.Drawing.Point(51, 281);
+            this.txt_pass.ForeColor = System.Drawing.Color.White;
+            this.txt_pass.Location = new System.Drawing.Point(51, 285);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(250, 19);
             this.txt_pass.TabIndex = 7;
             this.txt_pass.UseSystemPasswordChar = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 36);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "LOG IN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
@@ -104,22 +93,72 @@ namespace Adamart
             this.label1.TabIndex = 10;
             this.label1.Text = "LOG IN";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.panel1.Location = new System.Drawing.Point(12, 258);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(289, 3);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.panel2.Location = new System.Drawing.Point(13, 309);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(289, 3);
+            this.panel2.TabIndex = 14;
+            // 
+            // lbl_clear
+            // 
+            this.lbl_clear.AutoSize = true;
+            this.lbl_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clear.ForeColor = System.Drawing.Color.Snow;
+            this.lbl_clear.Location = new System.Drawing.Point(252, 327);
+            this.lbl_clear.Name = "lbl_clear";
+            this.lbl_clear.Size = new System.Drawing.Size(45, 16);
+            this.lbl_clear.TabIndex = 15;
+            this.lbl_clear.Text = "Clear";
+            this.lbl_clear.Click += new System.EventHandler(this.lbl_clear_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(129, 395);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Exit";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Adamart.Properties.Resources.icons8_exit_24;
+            this.pictureBox4.Location = new System.Drawing.Point(165, 395);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Adamart.Properties.Resources.pngwing_com;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 229);
+            this.pictureBox3.Image = global::Adamart.Properties.Resources.icons8_email_64;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 228);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 26);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Adamart.Properties.Resources.img_398183;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 280);
+            this.pictureBox2.Image = global::Adamart.Properties.Resources.icons8_lock_48__5_;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 279);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -134,52 +173,32 @@ namespace Adamart
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Tomato;
-            this.panel1.Location = new System.Drawing.Point(12, 258);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 3);
-            this.panel1.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Tomato;
-            this.panel2.Location = new System.Drawing.Point(13, 309);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 3);
-            this.panel2.TabIndex = 14;
-            // 
-            // lbl_clear
-            // 
-            this.lbl_clear.AutoSize = true;
-            this.lbl_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clear.ForeColor = System.Drawing.Color.Salmon;
-            this.lbl_clear.Location = new System.Drawing.Point(252, 327);
-            this.lbl_clear.Name = "lbl_clear";
-            this.lbl_clear.Size = new System.Drawing.Size(45, 16);
-            this.lbl_clear.TabIndex = 15;
-            this.lbl_clear.Text = "Clear";
-            this.lbl_clear.Click += new System.EventHandler(this.lbl_clear_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Salmon;
-            this.label2.Location = new System.Drawing.Point(140, 392);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Exit";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Adamart.Properties.Resources.icons8_email_send_24;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(13, 346);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 36);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "LOG IN";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(315, 424);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_clear);
             this.Controls.Add(this.panel2);
@@ -196,6 +215,7 @@ namespace Adamart
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -217,5 +237,6 @@ namespace Adamart
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_clear;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
