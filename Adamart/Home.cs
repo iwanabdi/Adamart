@@ -137,9 +137,5 @@ namespace Adamart
 
         }
 
-        private void btn_penjualan_MouseMove(object sender, MouseEventArgs e)
-        {
-            btn_penjualan.BackColor = Color.Brown;
-        }
     }
 }

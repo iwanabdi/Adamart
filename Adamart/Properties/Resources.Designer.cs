@@ -363,6 +363,26 @@ namespace Adamart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_see_male_account_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-see-male-account-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_see_male_account_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-see-male-account-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_sell_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-sell-24", resourceCulture);

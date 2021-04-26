@@ -16,5 +16,16 @@ namespace Adamart
         {
             InitializeComponent();
         }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'u3657402_adamartDataSet.pegawai' table. You can move, or remove it, as needed.
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

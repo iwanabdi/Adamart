@@ -105,6 +105,14 @@
     <Compile Include="Supplier.Designer.cs">
       <DependentUpon>Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="u3657402_adamartDataSet.cs">
+      <DependentUpon>u3657402_adamartDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="u3657402_adamartDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>u3657402_adamartDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +159,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="u3657402_adamartDataSet.xsc">
+      <DependentUpon>u3657402_adamartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="u3657402_adamartDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>u3657402_adamartDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="u3657402_adamartDataSet.xss">
+      <DependentUpon>u3657402_adamartDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -160,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\pos_sep.sql" />
+    <None Include="Resources\icons8-see-male-account-100.png" />
+    <None Include="Resources\icons8-see-male-account-24.png" />
     <None Include="Resources\icons8-email-64.png" />
     <None Include="Resources\icons8-exit-24.png" />
     <None Include="Resources\icons8-email-send-24.png" />
