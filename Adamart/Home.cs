@@ -26,7 +26,7 @@ namespace Adamart
                 jbt = "Admin";
             }
             MessageBox.Show("Selamat Datang " + jbt);
-            if (id.ToString() != "1")
+            if (jabatan != 1)
             {
                 btn_supplier.Visible = false;
                 btn_admin.Visible = false;
