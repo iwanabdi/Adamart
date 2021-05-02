@@ -15,27 +15,37 @@ namespace Adamart
     public partial class Stok : Form
     {
         private MySqlConnection conn;
+        private DataSet ds;
 
         public Stok()
         {
             InitializeComponent();
             koneksi cone = new koneksi();
             conn = new MySqlConnection(cone.conn());
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            ds = new DataSet();
             loadstok();
+            loadkategori();
         }
 
         public void loadstok()
         {
             conn.Open();
-            DataSet ds = new DataSet();
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,nama_barang,harga_barang, FROM barang", conn);
-            da.Fill(ds, "userop");
-            dataGridView1.DataSource = ds.Tables["userop"];
+            da.Fill(ds, "barang");
+            dataGridView1.DataSource = ds.Tables["barang"];
             conn.Close();
         }
+
+        public void loadkategori()
+        {
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,name FROM kategori_barang", conn);
+            da.Fill(ds, "kategori");
+            cbkategori.DataSource = ds.Tables["kategori"];
+            cbkategori.ValueMember = "id";
+            cbkategori.DisplayMember = "name";
+            conn.Close();
+        } 
+
     }
 }
