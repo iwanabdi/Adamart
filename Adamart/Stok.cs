@@ -30,7 +30,7 @@ namespace Adamart
         public void loadstok()
         {
             conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,nama_barang,harga_barang, FROM barang", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,nama_barang,harga_barang FROM barang", conn);
             da.Fill(ds, "barang");
             dataGridView1.DataSource = ds.Tables["barang"];
             conn.Close();
@@ -45,7 +45,16 @@ namespace Adamart
             cbkategori.ValueMember = "id";
             cbkategori.DisplayMember = "name";
             conn.Close();
-        } 
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
