@@ -85,11 +85,30 @@ namespace Adamart
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int no = 0;
             String nota = txtNota.Text;
-            MessageBox.Show(nota);
+            String supplier_id = cbSupplier.SelectedValue.ToString();
+            String barang_id = cbBarang.SelectedValue.ToString();
+            String qty = upQty.Text;
+            //MessageBox.Show(qty);
+
+            //int index = dataGridViewAddBarang.Rows.Add();
+            DataGridViewRow newRow = new DataGridViewRow();
+            newRow.CreateCells(dataGridViewAddBarang);
+            newRow.Cells[0].Value = (no + 1).ToString();
+            newRow.Cells[1].Value = nota;
+            newRow.Cells[2].Value = supplier_id;
+            newRow.Cells[3].Value = barang_id;
+            newRow.Cells[4].Value = qty;
+            dataGridViewAddBarang.Rows.Add(newRow);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
