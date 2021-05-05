@@ -23,6 +23,21 @@ namespace Adamart
             getSupplier();
             displayPembelian();
             getBarang();
+            getMaxNota();
+        }
+        public void getMaxNota()
+        {
+            db = new koneksi();
+            MySqlConnection conn = new MySqlConnection(db.conn());
+            MySqlCommand nota = new MySqlCommand("select max(id) as 'max_id' from h_beli", conn);
+
+            conn.Open();
+            MySqlDataReader reader = nota.ExecuteReader();
+
+            while (reader.Read())
+            {
+                txtNota.Text = "192-202-0-" + reader.GetString("max_id");
+            }
         }
 
         public void displayPembelian()
@@ -67,6 +82,11 @@ namespace Adamart
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
