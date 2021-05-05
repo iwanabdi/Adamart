@@ -36,7 +36,9 @@ namespace Adamart
 
             while (reader.Read())
             {
-                txtNota.Text = "192-202-0-" + reader.GetString("max_id");
+                string date = DateTime.UtcNow.ToString("yyyy");
+                txtNota.ReadOnly = true;
+                txtNota.Text = "1922020" + reader.GetString("max_id")+ date;
             }
         }
 
@@ -83,7 +85,8 @@ namespace Adamart
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            String nota = txtNota.Text;
+            MessageBox.Show(nota);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
