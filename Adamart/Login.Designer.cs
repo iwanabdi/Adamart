@@ -211,7 +211,6 @@ namespace Adamart
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lbl_email);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

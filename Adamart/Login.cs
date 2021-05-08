@@ -75,9 +75,11 @@ namespace Adamart
                 {
                     jabatan = "Admin";
                 }
+                txt_email.ResetText();
+                txt_pass.ResetText();
                 Home page_home = new Home(pegawai[2].ToString() + "(" + jabatan + ")", id, id_jabatan);
                 page_home.Show();
-                this.Hide();
+                //this.Hide();
             }
             else
             {

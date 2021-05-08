@@ -137,8 +137,6 @@ namespace Adamart
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login page_login = new Login();
-            page_login.Show();
         }
 
         private void panel_pembelian_Paint(object sender, PaintEventArgs e)
