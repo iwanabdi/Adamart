@@ -42,13 +42,13 @@ namespace Adamart
             this.buttontmbbrg = new System.Windows.Forms.Button();
             this.buttontmbktg = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategori = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stok_b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -185,6 +185,16 @@ namespace Adamart
             this.dataGridView1.Size = new System.Drawing.Size(589, 360);
             this.dataGridView1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 31);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Stok";
+            // 
             // Id
             // 
             this.Id.DataPropertyName = "id";
@@ -223,7 +233,7 @@ namespace Adamart
             // 
             // Stok_b
             // 
-            this.Stok_b.DataPropertyName = "Stok";
+            this.Stok_b.DataPropertyName = "stok";
             this.Stok_b.Frozen = true;
             this.Stok_b.HeaderText = "Stok";
             this.Stok_b.Name = "Stok_b";
@@ -238,16 +248,6 @@ namespace Adamart
             this.harga_barang.Name = "harga_barang";
             this.harga_barang.ReadOnly = true;
             this.harga_barang.Width = 98;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Stok";
             // 
             // Stok
             // 
