@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.datagridkategori = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtnama = new System.Windows.Forms.TextBox();
-            this.buttontmbbrg = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtnama = new System.Windows.Forms.TextBox();
+            this.buttontmbktg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkategori)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,31 +50,6 @@
             this.datagridkategori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridkategori.Size = new System.Drawing.Size(370, 326);
             this.datagridkategori.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Nama";
-            // 
-            // txtnama
-            // 
-            this.txtnama.Location = new System.Drawing.Point(388, 27);
-            this.txtnama.Name = "txtnama";
-            this.txtnama.Size = new System.Drawing.Size(178, 20);
-            this.txtnama.TabIndex = 10;
-            // 
-            // buttontmbbrg
-            // 
-            this.buttontmbbrg.Location = new System.Drawing.Point(388, 53);
-            this.buttontmbbrg.Name = "buttontmbbrg";
-            this.buttontmbbrg.Size = new System.Drawing.Size(124, 23);
-            this.buttontmbbrg.TabIndex = 9;
-            this.buttontmbbrg.Text = "Tambah Barang";
-            this.buttontmbbrg.UseVisualStyleBackColor = true;
             // 
             // Id
             // 
@@ -94,6 +69,31 @@
             this.nama_barang.ReadOnly = true;
             this.nama_barang.Width = 97;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(388, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nama Kategori";
+            // 
+            // txtnama
+            // 
+            this.txtnama.Location = new System.Drawing.Point(388, 27);
+            this.txtnama.Name = "txtnama";
+            this.txtnama.Size = new System.Drawing.Size(178, 20);
+            this.txtnama.TabIndex = 10;
+            // 
+            // buttontmbktg
+            // 
+            this.buttontmbktg.Location = new System.Drawing.Point(388, 53);
+            this.buttontmbktg.Name = "buttontmbktg";
+            this.buttontmbktg.Size = new System.Drawing.Size(124, 23);
+            this.buttontmbktg.TabIndex = 9;
+            this.buttontmbktg.Text = "Tambah Kategori";
+            this.buttontmbktg.UseVisualStyleBackColor = true;
+            // 
             // Kategori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,7 +101,7 @@
             this.ClientSize = new System.Drawing.Size(581, 342);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnama);
-            this.Controls.Add(this.buttontmbbrg);
+            this.Controls.Add(this.buttontmbktg);
             this.Controls.Add(this.datagridkategori);
             this.Name = "Kategori";
             this.Text = "Kategori";
@@ -119,6 +119,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnama;
-        private System.Windows.Forms.Button buttontmbbrg;
+        private System.Windows.Forms.Button buttontmbktg;
     }
 }
