@@ -142,6 +142,7 @@ namespace Adamart
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -211,6 +212,7 @@ namespace Adamart
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.lbl_email);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

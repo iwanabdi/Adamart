@@ -50,7 +50,7 @@ namespace Adamart
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT nomor_pegawai, nama_pegawai, email, tgl_lahir, CASE WHEN jabatan = 1 THEN 'Manager' WHEN jabatan = 2 THEN 'Admin' END AS jabatan FROM pegawai", conn);
             da.Fill(ds, "pegawai");
             data_admin.DataSource = ds.Tables["pegawai"];
-
+            //MessageBox.Show(data_admin.RowCount.
             conn.Close();
         }
 

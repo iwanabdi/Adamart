@@ -79,7 +79,7 @@ namespace Adamart
                 txt_pass.ResetText();
                 Home page_home = new Home(pegawai[2].ToString() + "(" + jabatan + ")", id, id_jabatan);
                 page_home.Show();
-                //this.Hide();
+                this.Hide();
             }
             else
             {
@@ -92,13 +92,18 @@ namespace Adamart
 
         private void label2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void lbl_clear_Click(object sender, EventArgs e)
         {
             txt_email.ResetText();
             txt_pass.ResetText();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

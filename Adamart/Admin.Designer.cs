@@ -32,6 +32,12 @@ namespace Adamart
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_tengah = new System.Windows.Forms.Panel();
             this.data_admin = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomor_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jabatan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_lahir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_bawah = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,12 +57,6 @@ namespace Adamart
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.panel_atas = new System.Windows.Forms.Panel();
             this.lbl_admin = new System.Windows.Forms.Label();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomor_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jabatan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tgl_lahir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_tengah.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_admin)).BeginInit();
@@ -90,6 +90,8 @@ namespace Adamart
             // 
             // data_admin
             // 
+            this.data_admin.AllowUserToAddRows = false;
+            this.data_admin.AllowUserToDeleteRows = false;
             this.data_admin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_admin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_admin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -102,10 +104,52 @@ namespace Adamart
             this.data_admin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_admin.Location = new System.Drawing.Point(0, 0);
             this.data_admin.Name = "data_admin";
+            this.data_admin.ReadOnly = true;
             this.data_admin.Size = new System.Drawing.Size(517, 361);
             this.data_admin.TabIndex = 0;
             this.data_admin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.data_admin.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.data_admin_RowPostPaint);
+            // 
+            // No
+            // 
+            this.No.HeaderText = "No";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            // 
+            // nomor_pegawai
+            // 
+            this.nomor_pegawai.DataPropertyName = "nomor_pegawai";
+            this.nomor_pegawai.HeaderText = "Nomor Pegawai";
+            this.nomor_pegawai.Name = "nomor_pegawai";
+            this.nomor_pegawai.ReadOnly = true;
+            // 
+            // nama_pegawai
+            // 
+            this.nama_pegawai.DataPropertyName = "nama_pegawai";
+            this.nama_pegawai.HeaderText = "Nama Pegawai";
+            this.nama_pegawai.Name = "nama_pegawai";
+            this.nama_pegawai.ReadOnly = true;
+            // 
+            // jabatan
+            // 
+            this.jabatan.DataPropertyName = "jabatan";
+            this.jabatan.HeaderText = "Jabatan";
+            this.jabatan.Name = "jabatan";
+            this.jabatan.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // tgl_lahir
+            // 
+            this.tgl_lahir.DataPropertyName = "tgl_lahir";
+            this.tgl_lahir.HeaderText = "Tanggal Lahir";
+            this.tgl_lahir.Name = "tgl_lahir";
+            this.tgl_lahir.ReadOnly = true;
             // 
             // panel_bawah
             // 
@@ -285,41 +329,6 @@ namespace Adamart
             this.lbl_admin.Size = new System.Drawing.Size(95, 31);
             this.lbl_admin.TabIndex = 0;
             this.lbl_admin.Text = "Admin";
-            // 
-            // No
-            // 
-            this.No.HeaderText = "No";
-            this.No.Name = "No";
-            // 
-            // nomor_pegawai
-            // 
-            this.nomor_pegawai.DataPropertyName = "nomor_pegawai";
-            this.nomor_pegawai.HeaderText = "Nomor Pegawai";
-            this.nomor_pegawai.Name = "nomor_pegawai";
-            // 
-            // nama_pegawai
-            // 
-            this.nama_pegawai.DataPropertyName = "nama_pegawai";
-            this.nama_pegawai.HeaderText = "Nama Pegawai";
-            this.nama_pegawai.Name = "nama_pegawai";
-            // 
-            // jabatan
-            // 
-            this.jabatan.DataPropertyName = "jabatan";
-            this.jabatan.HeaderText = "Jabatan";
-            this.jabatan.Name = "jabatan";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // tgl_lahir
-            // 
-            this.tgl_lahir.DataPropertyName = "tgl_lahir";
-            this.tgl_lahir.HeaderText = "Tanggal Lahir";
-            this.tgl_lahir.Name = "tgl_lahir";
             // 
             // Admin
             // 
