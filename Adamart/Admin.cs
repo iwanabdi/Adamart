@@ -8,46 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Adamart
 {
     public partial class Admin : Form
     {
+        Admin_Add page_add;
         private MySqlConnection conn;
         private DataSet ds;
 
         public Admin()
         {
             InitializeComponent();
+            page_add = new Admin_Add(this);
             koneksi cone = new koneksi();
             conn = new MySqlConnection(cone.conn());
             ds = new DataSet();
-            generateNP();
             loadPegawai();
 
-        }
-
-        public void generateNP()
-        {
-            koneksi cone = new koneksi();
-            MySqlConnection conn = new MySqlConnection(cone.conn());
-            MySqlCommand nota = new MySqlCommand("select max(id)+1 as 'max_id' from pegawai", conn);
-
-            conn.Open();
-            MySqlDataReader reader = nota.ExecuteReader();
-            while (reader.Read())
-            {
-                string date = DateTime.UtcNow.ToString("yyyy");
-                txtnomor.ReadOnly = true;
-                txtnomor.Text = "ADM" + date + reader.GetString("max_id");
-            }
         }
 
         public void loadPegawai()
         {
             ds.Tables.Clear();
             conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nomor_pegawai, nama_pegawai, email, tgl_lahir, CASE WHEN jabatan = 1 THEN 'Manager' WHEN jabatan = 2 THEN 'Admin' END AS jabatan FROM pegawai", conn);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nomor_pegawai, nama_pegawai, email, tgl_lahir, CASE WHEN jabatan = 1 THEN 'Manager' WHEN jabatan = 2 THEN 'Admin' END AS jabatan, password FROM pegawai", conn);
             da.Fill(ds, "pegawai");
             data_admin.DataSource = ds.Tables["pegawai"];
             //MessageBox.Show(data_admin.RowCount.
@@ -60,51 +46,68 @@ namespace Adamart
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btn_add_Click(object sender, EventArgs e)
         {
-
+            page_add.clear();
+            page_add.saveInfo();
+            page_add.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void data_admin_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        private void data_admin_RowPostPaint_1(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             this.data_admin.Rows[e.RowIndex].Cells["no"].Value = (e.RowIndex + 1).ToString();
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+        private void Admin_Shown(object sender, EventArgs e)
         {
-            String nomor_pegawai = txtnomor.Text;
-            String nama_pegawai = txtnama.Text;
-            int jabatan = cbjabatan.SelectedIndex+1;
-            String email = txtemail.Text;
-            String password = txtpassword.Text;
-            String tgl_lahir = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            loadPegawai();
+        }
 
-            try
+        private void txtcari_TextChanged(object sender, EventArgs e)
+        {
+            ds.Tables.Clear();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nomor_pegawai, nama_pegawai, email, tgl_lahir, CASE WHEN jabatan = 1 THEN 'Manager' WHEN jabatan = 2 THEN 'Admin' END AS jabatan, password FROM pegawai " +
+                "WHERE nomor_pegawai LIKE '%"+ txtcari.Text +"%'" +
+                "OR nama_pegawai LIKE '%"+ txtcari.Text +"%'", conn);
+            da.Fill(ds, "pegawai");
+            data_admin.DataSource = ds.Tables["pegawai"];
+            //MessageBox.Show(data_admin.RowCount.
+            conn.Close();
+        }
+
+        private void data_admin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
             {
-                koneksi cone = new koneksi();
-                //This is my insert query in which i am taking input from the user through windows forms  
-                string Query = "insert into pegawai(nomor_pegawai,nama_pegawai,jabatan,email,password,tgl_lahir) " +
-                    "values('" + nomor_pegawai + "','" + nama_pegawai + "','" + jabatan + "','" + email + "','" + password + "','" + tgl_lahir + "');";
-                //This is  MySqlConnection here i have created the object and pass my connection string.  
-                MySqlConnection MyConn2 = new MySqlConnection(cone.conn());
-                //This is command class which will handle the query and connection object.  
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-                MySqlDataReader MyReader2;
-                MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                MessageBox.Show("Save Data");
-                
-                MyConn2.Close();
-                loadPegawai();
+                page_add.clear();
+                page_add.nomor_pegawai = data_admin.Rows[e.RowIndex].Cells["nomor_pegawai"].Value.ToString();
+                page_add.nama_pegawai = data_admin.Rows[e.RowIndex].Cells["nama_pegawai"].Value.ToString();
+                page_add.jabatan = data_admin.Rows[e.RowIndex].Cells["jabatan"].Value.ToString();
+                page_add.email = data_admin.Rows[e.RowIndex].Cells["email"].Value.ToString();
+                page_add.password = data_admin.Rows[e.RowIndex].Cells["password"].Value.ToString();
+                page_add.updateInfo();
+                page_add.ShowDialog();
+                return;
             }
-            catch (Exception ex)
+            if (e.ColumnIndex == 2)
             {
-                MessageBox.Show(ex.Message);
+                String nama = data_admin.Rows[e.RowIndex].Cells["nama_pegawai"].Value.ToString();
+                String id = data_admin.Rows[e.RowIndex].Cells["nomor_pegawai"].Value.ToString();
+
+                if (MessageBox.Show("Yakin ingin menghapus data '" + nama + "'?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    String Query = "delete from pegawai where nomor_pegawai = '" + id + "';";
+                    MySqlCommand cmd = new MySqlCommand(Query, conn);
+                    MySqlDataReader MyReader;
+                    conn.Open();
+                    MyReader = cmd.ExecuteReader();
+                    MessageBox.Show("Data Berhasil Dihapus!");
+                    conn.Close();
+                    loadPegawai();
+                    txtcari.ResetText();
+                }
+                return;
             }
         }
     }

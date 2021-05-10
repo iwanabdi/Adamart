@@ -12,9 +12,14 @@ namespace Adamart
 {
     public partial class Home : Form
     {
+
+        Supplier page_supplier;
+        String id_login;
         public Home(string nama_pegawai, string id, int jabatan)
         {
             InitializeComponent();
+            page_supplier = new Supplier();
+            id_login = id.ToString();
             //MessageBox.Show("ID Pegawai yang Login : " + id.ToString());
             string jbt;
             if (jabatan == 1)
@@ -128,9 +133,9 @@ namespace Adamart
             panel_admin.Visible = false;
             panel_report.Visible = false;
             panel_supplier.Visible = true;
-            Supplier page_supplier = new Supplier();
             page_supplier.TopLevel = false;
             panel_supplier.Controls.Add(page_supplier);
+            page_supplier.id_login = id_login;
             page_supplier.Show();
         }
 

@@ -30,6 +30,13 @@ namespace Adamart
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.dataGridViewAddBarang = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nota_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barang_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewDisplayPembelian = new System.Windows.Forms.DataGridView();
@@ -42,16 +49,9 @@ namespace Adamart
             this.label2 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewAddBarang = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barang_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddBarang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,57 @@ namespace Adamart
             this.panel1.Size = new System.Drawing.Size(800, 772);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(338, 700);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(97, 30);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dataGridViewAddBarang
+            // 
+            this.dataGridViewAddBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddBarang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.no,
+            this.nota_pembelian,
+            this.id_supplier,
+            this.barang_id,
+            this.qty});
+            this.dataGridViewAddBarang.Location = new System.Drawing.Point(18, 444);
+            this.dataGridViewAddBarang.Name = "dataGridViewAddBarang";
+            this.dataGridViewAddBarang.Size = new System.Drawing.Size(770, 241);
+            this.dataGridViewAddBarang.TabIndex = 14;
+            this.dataGridViewAddBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // no
+            // 
+            this.no.HeaderText = "NO";
+            this.no.Name = "no";
+            // 
+            // nota_pembelian
+            // 
+            this.nota_pembelian.HeaderText = "Nota";
+            this.nota_pembelian.Name = "nota_pembelian";
+            // 
+            // id_supplier
+            // 
+            this.id_supplier.HeaderText = "SUPPLIER ID";
+            this.id_supplier.Name = "id_supplier";
+            // 
+            // barang_id
+            // 
+            this.barang_id.HeaderText = "BARANG ID";
+            this.barang_id.Name = "barang_id";
+            // 
+            // qty
+            // 
+            this.qty.HeaderText = "Qty";
+            this.qty.Name = "qty";
             // 
             // cbSupplier
             // 
@@ -182,56 +233,6 @@ namespace Adamart
             this.label1.TabIndex = 2;
             this.label1.Text = "Pembelian";
             // 
-            // dataGridViewAddBarang
-            // 
-            this.dataGridViewAddBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAddBarang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.no,
-            this.nota_pembelian,
-            this.id_supplier,
-            this.barang_id,
-            this.qty});
-            this.dataGridViewAddBarang.Location = new System.Drawing.Point(18, 444);
-            this.dataGridViewAddBarang.Name = "dataGridViewAddBarang";
-            this.dataGridViewAddBarang.Size = new System.Drawing.Size(770, 241);
-            this.dataGridViewAddBarang.TabIndex = 14;
-            this.dataGridViewAddBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(338, 700);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(97, 30);
-            this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // no
-            // 
-            this.no.HeaderText = "NO";
-            this.no.Name = "no";
-            // 
-            // nota_pembelian
-            // 
-            this.nota_pembelian.HeaderText = "Nota";
-            this.nota_pembelian.Name = "nota_pembelian";
-            // 
-            // id_supplier
-            // 
-            this.id_supplier.HeaderText = "SUPPLIER ID";
-            this.id_supplier.Name = "id_supplier";
-            // 
-            // barang_id
-            // 
-            this.barang_id.HeaderText = "BARANG ID";
-            this.barang_id.Name = "barang_id";
-            // 
-            // qty
-            // 
-            this.qty.HeaderText = "Qty";
-            this.qty.Name = "qty";
-            // 
             // Pembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +245,8 @@ namespace Adamart
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddBarang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).EndInit();
             this.ResumeLayout(false);
 
         }

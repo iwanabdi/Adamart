@@ -283,7 +283,6 @@ namespace Adamart
             this.panel_penjualan.Name = "panel_penjualan";
             this.panel_penjualan.Size = new System.Drawing.Size(679, 487);
             this.panel_penjualan.TabIndex = 3;
-            this.panel_penjualan.Visible = false;
             // 
             // panel_admin
             // 

@@ -13,11 +13,11 @@ namespace Adamart
 {
     public partial class Login : Form
     {
+        koneksi db = new koneksi();
+        DataSet ds;
         public Login()
         {
             InitializeComponent();
-            koneksi db;
-            db = new koneksi();
             MySqlConnection conn = new MySqlConnection(db.conn());
             var cmd = new MySqlCommand("select * from pegawai", conn);
             /*MySqlDataReader reader;*/
