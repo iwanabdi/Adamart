@@ -75,5 +75,20 @@ namespace Adamart
             loadstok();
 
         }
+
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.dataGridView1.Rows[e.RowIndex].Cells["no"].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbkategori_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
