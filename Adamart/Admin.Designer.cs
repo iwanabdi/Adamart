@@ -38,9 +38,8 @@ namespace Adamart
             this.lbl_admin = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtcari = new System.Windows.Forms.TextBox();
-            this.data_admin = new System.Windows.Forms.DataGridView();
-            this.btn_add = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.data_admin = new System.Windows.Forms.DataGridView();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomor_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +49,11 @@ namespace Adamart
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.hapus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_add = new System.Windows.Forms.Button();
             this.panel_atas.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data_admin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_admin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_atas
@@ -101,6 +101,19 @@ namespace Adamart
             this.txtcari.Size = new System.Drawing.Size(237, 25);
             this.txtcari.TabIndex = 2;
             this.txtcari.TextChanged += new System.EventHandler(this.txtcari_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Adamart.Properties.Resources.search_icon_png_9985_Windows;
+            this.pictureBox1.Location = new System.Drawing.Point(754, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // data_admin
             // 
@@ -159,7 +172,6 @@ namespace Adamart
             this.data_admin.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.data_admin.RowHeadersVisible = false;
             this.data_admin.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.data_admin.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.data_admin.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.data_admin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data_admin.ShowEditingIcon = false;
@@ -167,34 +179,6 @@ namespace Adamart
             this.data_admin.TabIndex = 0;
             this.data_admin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_admin_CellClick);
             this.data_admin.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.data_admin_RowPostPaint_1);
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(14, 22);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(103, 38);
-            this.btn_add.TabIndex = 0;
-            this.btn_add.Text = "Tambah Data";
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Adamart.Properties.Resources.search_icon_png_9985_Windows;
-            this.pictureBox1.Location = new System.Drawing.Point(754, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // no
             // 
@@ -284,6 +268,21 @@ namespace Adamart
             this.password.ReadOnly = true;
             this.password.Visible = false;
             // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Location = new System.Drawing.Point(14, 22);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(103, 38);
+            this.btn_add.TabIndex = 0;
+            this.btn_add.Text = "Tambah Data";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,8 +301,8 @@ namespace Adamart
             this.panel_atas.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data_admin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_admin)).EndInit();
             this.ResumeLayout(false);
 
         }

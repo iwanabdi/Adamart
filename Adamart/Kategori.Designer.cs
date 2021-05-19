@@ -28,97 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.datagridkategori = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnama = new System.Windows.Forms.TextBox();
             this.buttontmbktg = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridkategori)).BeginInit();
+            this.data_kategori = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_batal = new System.Windows.Forms.Button();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.data_kategori)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // datagridkategori
-            // 
-            this.datagridkategori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.datagridkategori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridkategori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.nama_barang});
-            this.datagridkategori.Location = new System.Drawing.Point(12, 12);
-            this.datagridkategori.Name = "datagridkategori";
-            this.datagridkategori.ReadOnly = true;
-            this.datagridkategori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridkategori.Size = new System.Drawing.Size(370, 326);
-            this.datagridkategori.TabIndex = 5;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "id";
-            this.Id.Frozen = true;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 41;
-            // 
-            // nama_barang
-            // 
-            this.nama_barang.DataPropertyName = "nama_barang";
-            this.nama_barang.Frozen = true;
-            this.nama_barang.HeaderText = "Nama Barang";
-            this.nama_barang.Name = "nama_barang";
-            this.nama_barang.ReadOnly = true;
-            this.nama_barang.Width = 97;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 11);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nama Kategori";
             // 
             // txtnama
             // 
-            this.txtnama.Location = new System.Drawing.Point(388, 27);
+            this.txtnama.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnama.Location = new System.Drawing.Point(9, 82);
             this.txtnama.Name = "txtnama";
-            this.txtnama.Size = new System.Drawing.Size(178, 20);
+            this.txtnama.Size = new System.Drawing.Size(249, 25);
             this.txtnama.TabIndex = 10;
             // 
             // buttontmbktg
             // 
-            this.buttontmbktg.Location = new System.Drawing.Point(388, 53);
+            this.buttontmbktg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.buttontmbktg.FlatAppearance.BorderSize = 0;
+            this.buttontmbktg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttontmbktg.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttontmbktg.ForeColor = System.Drawing.Color.White;
+            this.buttontmbktg.Location = new System.Drawing.Point(264, 82);
             this.buttontmbktg.Name = "buttontmbktg";
-            this.buttontmbktg.Size = new System.Drawing.Size(124, 23);
+            this.buttontmbktg.Size = new System.Drawing.Size(125, 25);
             this.buttontmbktg.TabIndex = 9;
             this.buttontmbktg.Text = "Tambah Kategori";
-            this.buttontmbktg.UseVisualStyleBackColor = true;
+            this.buttontmbktg.UseVisualStyleBackColor = false;
+            this.buttontmbktg.Click += new System.EventHandler(this.buttontmbktg_Click);
+            // 
+            // data_kategori
+            // 
+            this.data_kategori.AllowUserToAddRows = false;
+            this.data_kategori.AllowUserToDeleteRows = false;
+            this.data_kategori.AllowUserToResizeColumns = false;
+            this.data_kategori.AllowUserToResizeRows = false;
+            this.data_kategori.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.data_kategori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_kategori.BackgroundColor = System.Drawing.Color.White;
+            this.data_kategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.data_kategori.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_kategori.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.data_kategori.ColumnHeadersHeight = 35;
+            this.data_kategori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.data_kategori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.no,
+            this.id,
+            this.nama_supplier});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_kategori.DefaultCellStyle = dataGridViewCellStyle2;
+            this.data_kategori.GridColor = System.Drawing.Color.RosyBrown;
+            this.data_kategori.Location = new System.Drawing.Point(9, 110);
+            this.data_kategori.MultiSelect = false;
+            this.data_kategori.Name = "data_kategori";
+            this.data_kategori.ReadOnly = true;
+            this.data_kategori.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_kategori.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.data_kategori.RowHeadersVisible = false;
+            this.data_kategori.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.data_kategori.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data_kategori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_kategori.ShowEditingIcon = false;
+            this.data_kategori.Size = new System.Drawing.Size(379, 221);
+            this.data_kategori.TabIndex = 12;
+            this.data_kategori.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.data_kategori_RowPostPaint);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Brown;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 50);
+            this.panel1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(138, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Form Tambah Data";
+            // 
+            // btn_batal
+            // 
+            this.btn_batal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_batal.BackColor = System.Drawing.Color.Gray;
+            this.btn_batal.FlatAppearance.BorderSize = 0;
+            this.btn_batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_batal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_batal.ForeColor = System.Drawing.Color.White;
+            this.btn_batal.Location = new System.Drawing.Point(9, 350);
+            this.btn_batal.Name = "btn_batal";
+            this.btn_batal.Size = new System.Drawing.Size(379, 35);
+            this.btn_batal.TabIndex = 27;
+            this.btn_batal.Text = "Tutup";
+            this.btn_batal.UseVisualStyleBackColor = false;
+            this.btn_batal.Click += new System.EventHandler(this.btn_batal_Click);
+            // 
+            // no
+            // 
+            this.no.DataPropertyName = "no";
+            this.no.FillWeight = 10F;
+            this.no.HeaderText = "#";
+            this.no.Name = "no";
+            this.no.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 30F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // nama_supplier
+            // 
+            this.nama_supplier.DataPropertyName = "name";
+            this.nama_supplier.FillWeight = 57.53121F;
+            this.nama_supplier.HeaderText = "Nama Kategori";
+            this.nama_supplier.Name = "nama_supplier";
+            this.nama_supplier.ReadOnly = true;
             // 
             // Kategori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 342);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(400, 407);
+            this.Controls.Add(this.btn_batal);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.data_kategori);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnama);
             this.Controls.Add(this.buttontmbktg);
-            this.Controls.Add(this.datagridkategori);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Kategori";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kategori";
             this.Load += new System.EventHandler(this.Kategori_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.datagridkategori)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_kategori)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView datagridkategori;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnama;
         private System.Windows.Forms.Button buttontmbktg;
+        private System.Windows.Forms.DataGridView data_kategori;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_batal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_supplier;
     }
 }

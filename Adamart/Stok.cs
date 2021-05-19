@@ -14,39 +14,29 @@ namespace Adamart
 {
     public partial class Stok : Form
     {
+        Stok_Form page_add;
         private MySqlConnection conn;
         private DataSet ds;
+        MySqlDataAdapter da;
 
         public Stok()
         {
             InitializeComponent();
+            page_add = new Stok_Form(this);
             koneksi cone = new koneksi();
             conn = new MySqlConnection(cone.conn());
             ds = new DataSet();
             loadstok();
-            loadkategori();
         }
 
         public void loadstok()
         {
             ds.Tables.Clear();
             conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT b.id,b.nama_barang,k.name,b.merk,b.harga_barang,b.stok FROM barang b " +
+            da = new MySqlDataAdapter("SELECT b.id,b.nama_barang,k.name,b.merk,b.harga_barang,b.stok FROM barang b " +
                 "left join kategori_barang k on b.id_kategori=k.id", conn);
             da.Fill(ds, "barang");
             dataGridView1.DataSource = ds.Tables["barang"];
-            conn.Close();
-        }
-
-        public void loadkategori()
-        {
-            ds.Tables.Clear();
-            conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,name FROM kategori_barang", conn);
-            da.Fill(ds, "kategori");
-            cbkategori.DataSource = ds.Tables["kategori"];
-            cbkategori.ValueMember = "id";
-            cbkategori.DisplayMember = "name";
             conn.Close();
         }
 
@@ -58,22 +48,9 @@ namespace Adamart
 
         private void buttontmbbrg_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = "insert into barang(nama_barang,stok,harga_barang,merk,id_kategori,created_at) values(?nama,0,?harga,?merk,?kategori,?now)";
-            cmd.Parameters.Add("?nama", MySqlDbType.VarChar).Value= txtnama.Text;
-            cmd.Parameters.Add("?harga", MySqlDbType.VarChar).Value= txtharga.Text;
-            cmd.Parameters.Add("?merk", MySqlDbType.VarChar).Value = txtmerk.Text;
-            cmd.Parameters.Add("?kategori", MySqlDbType.VarChar).Value = cbkategori.SelectedValue;
-            cmd.Parameters.Add("?now", MySqlDbType.VarChar).Value = DateTime.Now.ToString();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            txtharga.Text = "";
-            txtmerk.Text = "";
-            txtnama.Text = "";
-            loadstok();
-
+            page_add.clear();
+            page_add.saveInfo();
+            page_add.ShowDialog();
         }
 
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -81,14 +58,40 @@ namespace Adamart
             this.dataGridView1.Rows[e.RowIndex].Cells["no"].Value = (e.RowIndex + 1).ToString();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Stok_Shown(object sender, EventArgs e)
         {
-
+            loadstok();
         }
 
-        private void cbkategori_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtcari_TextChanged(object sender, EventArgs e)
         {
+            ds.Tables.Clear();
+            conn.Open();
+            da = new MySqlDataAdapter("SELECT b.id,b.nama_barang,k.name,b.merk,b.harga_barang,b.stok FROM barang b " +
+                "LEFT JOIN kategori_barang k ON b.id_kategori=k.id " +
+                "WHERE b.id LIKE '%"+txtcari.Text+"%'" +
+                "OR b.nama_barang LIKE '%" + txtcari.Text + "%'" +
+                "OR b.merk LIKE '%"+ txtcari.Text + "%'", conn);
+            da.Fill(ds, "barang");
+            dataGridView1.DataSource = ds.Tables["barang"];
+            conn.Close();
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                /*MessageBox.Show("Edit Okee");*/
+                page_add.clear();
+                page_add.id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                page_add.nama_barang = dataGridView1.Rows[e.RowIndex].Cells["nama_barang"].Value.ToString();
+                page_add.harga_barang = dataGridView1.Rows[e.RowIndex].Cells["harga_barang"].Value.ToString();
+                page_add.merk = dataGridView1.Rows[e.RowIndex].Cells["merk"].Value.ToString();
+                page_add.kategori = dataGridView1.Rows[e.RowIndex].Cells["kategori"].Value.ToString();
+                page_add.updateData();
+                page_add.ShowDialog();
+                return;
+            }
         }
     }
 }
