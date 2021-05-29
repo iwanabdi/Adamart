@@ -65,5 +65,44 @@ namespace Adamart
         {
             this.Close();
         }
+
+        private void datacontent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                String nama = data_kategori.Rows[e.RowIndex].Cells["nama_supplier"].Value.ToString();
+                String id = data_kategori.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                if (MessageBox.Show("Yakin ingin menghapus data '" + nama + "'?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    String Query = "update from kategori_barang where id = '" + id + "' ";
+                    MySqlCommand cmd = new MySqlCommand(Query, conn);
+                    MySqlDataReader MyReader;
+                    conn.Open();
+                    MyReader = cmd.ExecuteReader();
+                    MessageBox.Show("Data Berhasil Diupdate!");
+                    conn.Close();
+                    loadKategori();
+                }
+                return;
+            }
+
+            if (e.ColumnIndex == 2)
+            {
+                String nama = data_kategori.Rows[e.RowIndex].Cells["nama_supplier"].Value.ToString();
+                String id = data_kategori.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                if (MessageBox.Show("Yakin ingin menghapus data '" + nama + "'?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    String Query = "delete from kategori_barang where id = '" + id + "' ";
+                    MySqlCommand cmd = new MySqlCommand(Query, conn);
+                    MySqlDataReader MyReader;
+                    conn.Open();
+                    MyReader = cmd.ExecuteReader();
+                    MessageBox.Show("Data Berhasil Dihapus!");
+                    conn.Close();
+                    loadKategori();
+                }
+                return;
+            }
+        }
     }
 }
