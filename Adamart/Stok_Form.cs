@@ -43,7 +43,7 @@ namespace Adamart
             txtharga.Text = harga_barang;
             txtmerk.Text = merk;
             cbkategori.SelectedItem = kategori;
-            MessageBox.Show(kategori);
+            //MessageBox.Show(kategori);
         }
 
         private void btn_batal_Click(object sender, EventArgs e)

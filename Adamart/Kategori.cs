@@ -72,9 +72,9 @@ namespace Adamart
             {
                 String nama = data_kategori.Rows[e.RowIndex].Cells["nama_supplier"].Value.ToString();
                 String id = data_kategori.Rows[e.RowIndex].Cells["id"].Value.ToString();
-                if (MessageBox.Show("Yakin ingin menghapus data '" + nama + "'?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Yakin ingin mengubah data '" + nama + "'?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    String Query = "update from kategori_barang where id = '" + id + "' ";
+                    String Query = "update kategori_barang set name='" + nama + "' where id = '" + id + "' ";
                     MySqlCommand cmd = new MySqlCommand(Query, conn);
                     MySqlDataReader MyReader;
                     conn.Open();

@@ -47,8 +47,8 @@ namespace Adamart
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stok_b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategori = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stok_b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,8 +141,8 @@ namespace Adamart
             this.nama_barang,
             this.Merk,
             this.harga_barang,
-            this.Stok_b,
             this.Kategori,
+            this.Stok_b,
             this.edit});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -246,19 +246,19 @@ namespace Adamart
             this.harga_barang.Name = "harga_barang";
             this.harga_barang.ReadOnly = true;
             // 
-            // Stok_b
-            // 
-            this.Stok_b.DataPropertyName = "stok";
-            this.Stok_b.HeaderText = "Stok";
-            this.Stok_b.Name = "Stok_b";
-            this.Stok_b.ReadOnly = true;
-            // 
             // Kategori
             // 
             this.Kategori.DataPropertyName = "name";
             this.Kategori.HeaderText = "Kategori";
             this.Kategori.Name = "Kategori";
             this.Kategori.ReadOnly = true;
+            // 
+            // Stok_b
+            // 
+            this.Stok_b.DataPropertyName = "stok";
+            this.Stok_b.HeaderText = "Stok";
+            this.Stok_b.Name = "Stok_b";
+            this.Stok_b.ReadOnly = true;
             // 
             // edit
             // 
@@ -313,8 +313,8 @@ namespace Adamart
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Merk;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga_barang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stok_b;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategori;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stok_b;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
     }
 }

@@ -44,6 +44,8 @@ namespace Adamart
         {
             Kategori ktg = new Kategori();
             ktg.ShowDialog();
+            loadstok();
+            page_add.loadkategori();
         }
 
         private void buttontmbbrg_Click(object sender, EventArgs e)
