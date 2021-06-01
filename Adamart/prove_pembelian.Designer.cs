@@ -30,11 +30,15 @@
         {
             this.panel_atas = new System.Windows.Forms.Panel();
             this.lbl_stok = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridDetail = new System.Windows.Forms.DataGridView();
             this.btn_approve = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.id_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_atas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_atas
@@ -58,13 +62,19 @@
             this.lbl_stok.TabIndex = 0;
             this.lbl_stok.Text = "Halaman Pembelian";
             // 
-            // dataGridView1
+            // dataGridDetail
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(528, 169);
-            this.dataGridView1.TabIndex = 29;
+            this.dataGridDetail.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_barang,
+            this.nama_barang,
+            this.Qty,
+            this.total});
+            this.dataGridDetail.Location = new System.Drawing.Point(12, 69);
+            this.dataGridDetail.Name = "dataGridDetail";
+            this.dataGridDetail.Size = new System.Drawing.Size(528, 169);
+            this.dataGridDetail.TabIndex = 29;
             // 
             // btn_approve
             // 
@@ -76,16 +86,43 @@
             this.btn_approve.TabIndex = 30;
             this.btn_approve.Text = "APPROVE";
             this.btn_approve.UseVisualStyleBackColor = false;
+            this.btn_approve.Click += new System.EventHandler(this.btn_approve_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Orange;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(291, 255);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(249, 30);
             this.button2.TabIndex = 31;
             this.button2.Text = "TUTUP";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // id_barang
+            // 
+            this.id_barang.DataPropertyName = "id_barang";
+            this.id_barang.HeaderText = "ID Barang";
+            this.id_barang.Name = "id_barang";
+            // 
+            // nama_barang
+            // 
+            this.nama_barang.DataPropertyName = "nama_barang";
+            this.nama_barang.HeaderText = "Nama Barang";
+            this.nama_barang.Name = "nama_barang";
+            // 
+            // Qty
+            // 
+            this.Qty.DataPropertyName = "qty";
+            this.Qty.HeaderText = "qty";
+            this.Qty.Name = "Qty";
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "sub_total";
+            this.total.HeaderText = "Total Pembelian";
+            this.total.Name = "total";
             // 
             // prove_pembelian
             // 
@@ -94,15 +131,16 @@
             this.ClientSize = new System.Drawing.Size(552, 365);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_approve);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridDetail);
             this.Controls.Add(this.panel_atas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "prove_pembelian";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "prove_pembelian";
+            this.Load += new System.EventHandler(this.prove_pembelian_Load);
             this.panel_atas.ResumeLayout(false);
             this.panel_atas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,8 +149,12 @@
 
         private System.Windows.Forms.Panel panel_atas;
         private System.Windows.Forms.Label lbl_stok;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridDetail;
         private System.Windows.Forms.Button btn_approve;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_barang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
     }
 }

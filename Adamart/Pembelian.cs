@@ -17,9 +17,11 @@ namespace Adamart
         //private DataSet data;
 
         koneksi db;
+        prove_pembelian prove2;
         public Pembelian()
         {
             InitializeComponent();
+            //prove2 = new prove_pembelian();
             getSupplier();
             displayPembelian();
             getBarang();
@@ -140,8 +142,8 @@ namespace Adamart
             MySqlConnection conn = new MySqlConnection(db.conn());
             conn.Open();
 
-            String query = "INSERT INTO h_beli(ID_SUPPLIER , NOTA_PEMBELIAN , SUBTOTAL , CREATED_AT , UPDATED_AT) " +
-                "VALUES(@ID_SUPPLIER , @NOTA_PEMBELIAN , @SUBTOTAL , @CREATED_AT , @UPDATED_AT)";
+            String query = "INSERT INTO h_beli(ID_SUPPLIER , NOTA_PEMBELIAN , SUBTOTAL , STATUS_APPROVE , CREATED_AT , UPDATED_AT) " +
+                "VALUES(@ID_SUPPLIER , @NOTA_PEMBELIAN , @SUBTOTAL , @STATUS_APPROVE , @CREATED_AT , @UPDATED_AT)";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@ID_SUPPLIER", supplier);
@@ -149,6 +151,7 @@ namespace Adamart
             cmd.Parameters.AddWithValue("@SUBTOTAL", subtotal.ToString());
             cmd.Parameters.AddWithValue("@CREATED_AT", date_now);
             cmd.Parameters.AddWithValue("@UPDATED_AT", date_now);
+            cmd.Parameters.AddWithValue("@STATUS_APPROVE", "0");
             cmd.ExecuteNonQuery();
 
             MySqlCommand id_hbeli = new MySqlCommand("select id from h_beli where nota_pembelian='" + nota + "'", conn);
@@ -185,15 +188,37 @@ namespace Adamart
                 cmdDetail.ExecuteNonQuery();
             }
             conn.Close();
+            getMaxNota();
+            displayPembelian();
+            dataGridViewAddBarang.Rows.Clear();
         }
 
         private void dataGridViewDisplayPembelian_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
-                MessageBox.Show("asd");
+                prove2 = new prove_pembelian();
+                prove2.nota = dataGridViewDisplayPembelian.Rows[e.RowIndex].Cells["nota"].Value.ToString();
+                //String nota = dataGridViewDisplayPembelian.Rows[e.RowIndex].Cells["nota"].Value.ToString();
+                //MessageBox.Show(nota);
+                prove2.ShowDialog();
                 return;
             }
+        }
+
+        private void txtcari_TextChanged(object sender, EventArgs e)
+        {
+            DataSet ds2 = new DataSet();
+            db = new koneksi();
+            MySqlConnection conn = new MySqlConnection(db.conn());
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select hb.nota_pembelian , " +
+                "s.nama_supplier " +
+                "from h_beli hb " +
+                "join supplier s on hb.id_supplier=s.id where hb.nota_pembelian LIKE '%"+txtcari.Text+"%'", conn);
+            
+            adapter.Fill(ds2, "display");
+            dataGridViewDisplayPembelian.DataSource = ds2.Tables["display"];
+            conn.Close();
         }
     }
 }

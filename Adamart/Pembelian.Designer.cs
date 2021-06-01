@@ -29,12 +29,17 @@ namespace Adamart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewAddBarang = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nota_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barang_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbSupplier = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewDisplayPembelian = new System.Windows.Forms.DataGridView();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,25 +54,23 @@ namespace Adamart
             this.txtNota = new System.Windows.Forms.TextBox();
             this.panel_atas = new System.Windows.Forms.Panel();
             this.lbl_stok = new System.Windows.Forms.Label();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barang_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtcari = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddBarang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).BeginInit();
             this.panel_atas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.txtcari);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.dataGridViewAddBarang);
             this.panel1.Controls.Add(this.cbSupplier);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.dataGridViewDisplayPembelian);
             this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Controls.Add(this.label5);
@@ -88,9 +91,9 @@ namespace Adamart
             this.btnSave.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(338, 700);
+            this.btnSave.Location = new System.Drawing.Point(18, 700);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(97, 30);
+            this.btnSave.Size = new System.Drawing.Size(770, 30);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -114,6 +117,36 @@ namespace Adamart
             this.dataGridViewAddBarang.TabIndex = 14;
             this.dataGridViewAddBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // no
+            // 
+            this.no.HeaderText = "NO";
+            this.no.Name = "no";
+            // 
+            // nota_pembelian
+            // 
+            this.nota_pembelian.HeaderText = "Nota";
+            this.nota_pembelian.Name = "nota_pembelian";
+            // 
+            // id_supplier
+            // 
+            this.id_supplier.HeaderText = "SUPPLIER ID";
+            this.id_supplier.Name = "id_supplier";
+            // 
+            // barang_id
+            // 
+            this.barang_id.HeaderText = "BARANG ID";
+            this.barang_id.Name = "barang_id";
+            // 
+            // qty
+            // 
+            this.qty.HeaderText = "Qty";
+            this.qty.Name = "qty";
+            // 
+            // hargaTotal
+            // 
+            this.hargaTotal.HeaderText = "Harga";
+            this.hargaTotal.Name = "hargaTotal";
+            // 
             // cbSupplier
             // 
             this.cbSupplier.FormattingEnabled = true;
@@ -121,13 +154,6 @@ namespace Adamart
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(192, 21);
             this.cbSupplier.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(588, 19);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
             // 
             // dataGridViewDisplayPembelian
             // 
@@ -159,18 +185,18 @@ namespace Adamart
             // 
             // prove
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.prove.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.prove.DefaultCellStyle = dataGridViewCellStyle2;
             this.prove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prove.HeaderText = "";
             this.prove.Name = "prove";
             this.prove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.prove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.prove.Text = "Prove";
+            this.prove.Text = "Detail";
             this.prove.UseColumnTextForButtonValue = true;
             // 
             // btnTambah
@@ -180,7 +206,7 @@ namespace Adamart
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTambah.Location = new System.Drawing.Point(18, 256);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(97, 30);
+            this.btnTambah.Size = new System.Drawing.Size(284, 30);
             this.btnTambah.TabIndex = 10;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -269,35 +295,28 @@ namespace Adamart
             this.lbl_stok.TabIndex = 0;
             this.lbl_stok.Text = "Halaman Pembelian";
             // 
-            // no
+            // txtcari
             // 
-            this.no.HeaderText = "NO";
-            this.no.Name = "no";
+            this.txtcari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcari.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcari.Location = new System.Drawing.Point(522, 30);
+            this.txtcari.Name = "txtcari";
+            this.txtcari.Size = new System.Drawing.Size(237, 25);
+            this.txtcari.TabIndex = 17;
+            this.txtcari.TextChanged += new System.EventHandler(this.txtcari_TextChanged);
             // 
-            // nota_pembelian
+            // pictureBox1
             // 
-            this.nota_pembelian.HeaderText = "Nota";
-            this.nota_pembelian.Name = "nota_pembelian";
-            // 
-            // id_supplier
-            // 
-            this.id_supplier.HeaderText = "SUPPLIER ID";
-            this.id_supplier.Name = "id_supplier";
-            // 
-            // barang_id
-            // 
-            this.barang_id.HeaderText = "BARANG ID";
-            this.barang_id.Name = "barang_id";
-            // 
-            // qty
-            // 
-            this.qty.HeaderText = "Qty";
-            this.qty.Name = "qty";
-            // 
-            // hargaTotal
-            // 
-            this.hargaTotal.HeaderText = "Harga";
-            this.hargaTotal.Name = "hargaTotal";
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Adamart.Properties.Resources.search_icon_png_9985_Windows;
+            this.pictureBox1.Location = new System.Drawing.Point(758, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // Pembelian
             // 
@@ -316,6 +335,7 @@ namespace Adamart
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).EndInit();
             this.panel_atas.ResumeLayout(false);
             this.panel_atas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,21 +351,22 @@ namespace Adamart
         private System.Windows.Forms.DomainUpDown upQty;
         private System.Windows.Forms.ComboBox cbBarang;
         private System.Windows.Forms.Button btnTambah;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridViewDisplayPembelian;
         private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.DataGridView dataGridViewAddBarang;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel_atas;
         private System.Windows.Forms.Label lbl_stok;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_supplier;
-        private System.Windows.Forms.DataGridViewButtonColumn prove;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
         private System.Windows.Forms.DataGridViewTextBoxColumn nota_pembelian;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn barang_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_supplier;
+        private System.Windows.Forms.DataGridViewButtonColumn prove;
+        private System.Windows.Forms.TextBox txtcari;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
