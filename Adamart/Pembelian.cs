@@ -46,13 +46,10 @@ namespace Adamart
         {
             db = new koneksi();
             MySqlConnection conn = new MySqlConnection(db.conn());
-            MySqlDataAdapter adapter = new MySqlDataAdapter("select hb.nota_pembelian as 'Nota Pembelian' , " +
-                "s.nama_supplier as 'Nama Supplier', " +
-                "b.nama_barang as 'Nama Barang', db.qty as 'Jumlah Barang'" +
+            MySqlDataAdapter adapter = new MySqlDataAdapter("select hb.nota_pembelian , " +
+                "s.nama_supplier " +
                 "from h_beli hb " +
-                "join supplier s on hb.id_supplier=s.id " +
-                "join d_beli db on db.id_h_beli=hb.id " +
-                "join barang b on db.id_barang=b.id", conn);
+                "join supplier s on hb.id_supplier=s.id ", conn);
             DataSet ds2 = new DataSet();
             adapter.Fill(ds2, "display");
             dataGridViewDisplayPembelian.DataSource = ds2.Tables["display"];
@@ -92,6 +89,17 @@ namespace Adamart
             String qty = upQty.Text;
             //MessageBox.Show(qty);
 
+            db = new koneksi();
+            MySqlConnection conn = new MySqlConnection(db.conn());
+            MySqlCommand get_harga = new MySqlCommand("SELECT harga_barang FROM barang where id='" + barang_id + "'", conn);
+            conn.Open();
+            MySqlDataReader reader = get_harga.ExecuteReader();
+            int total = 0;
+            while (reader.Read())
+            {
+                total = Int32.Parse(qty) * reader.GetInt32("harga_barang");
+            }
+
             //int index = dataGridViewAddBarang.Rows.Add();
             DataGridViewRow newRow = new DataGridViewRow();
             newRow.CreateCells(dataGridViewAddBarang);
@@ -100,6 +108,7 @@ namespace Adamart
             newRow.Cells[2].Value = supplier_id;
             newRow.Cells[3].Value = barang_id;
             newRow.Cells[4].Value = qty;
+            newRow.Cells[5].Value = total;
             dataGridViewAddBarang.Rows.Add(newRow);
         }
 
@@ -115,7 +124,76 @@ namespace Adamart
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            String nota = dataGridViewAddBarang.Rows[0].Cells[1].Value.ToString();
+            String supplier = dataGridViewAddBarang.Rows[0].Cells[2].Value.ToString();
+            String date_now = DateTime.UtcNow.ToString("yyyy-MM-dd");
+            int subtotal = 0;
+            String mx_id_beli = "";
+            int index = dataGridViewAddBarang.Rows.Count;
 
+            for (int rows = 0; rows < dataGridViewAddBarang.Rows.Count - 1; rows++)
+            {
+                subtotal += Convert.ToInt32(dataGridViewAddBarang.Rows[rows].Cells["hargaTotal"].Value);
+            }
+            //MessageBox.Show(subtotal.ToString());
+            db = new koneksi();
+            MySqlConnection conn = new MySqlConnection(db.conn());
+            conn.Open();
+
+            String query = "INSERT INTO h_beli(ID_SUPPLIER , NOTA_PEMBELIAN , SUBTOTAL , CREATED_AT , UPDATED_AT) " +
+                "VALUES(@ID_SUPPLIER , @NOTA_PEMBELIAN , @SUBTOTAL , @CREATED_AT , @UPDATED_AT)";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@ID_SUPPLIER", supplier);
+            cmd.Parameters.AddWithValue("@NOTA_PEMBELIAN", nota);
+            cmd.Parameters.AddWithValue("@SUBTOTAL", subtotal.ToString());
+            cmd.Parameters.AddWithValue("@CREATED_AT", date_now);
+            cmd.Parameters.AddWithValue("@UPDATED_AT", date_now);
+            cmd.ExecuteNonQuery();
+
+            MySqlCommand id_hbeli = new MySqlCommand("select id from h_beli where nota_pembelian='" + nota + "'", conn);
+            MySqlDataReader reader = id_hbeli.ExecuteReader();
+
+            while (reader.Read())
+            {
+                mx_id_beli = reader.GetString("id");
+            }
+            conn.Close();
+
+
+
+            conn.Open();
+            for (int rows = 0; rows < dataGridViewAddBarang.Rows.Count - 1; rows++)
+            {
+                String Note = dataGridViewAddBarang.Rows[rows].Cells["nota_pembelian"].Value.ToString();
+                String id_supplier = dataGridViewAddBarang.Rows[rows].Cells["id_supplier"].Value.ToString();
+                String barang_id = dataGridViewAddBarang.Rows[rows].Cells["barang_id"].Value.ToString();
+                String qty = dataGridViewAddBarang.Rows[rows].Cells["qty"].Value.ToString();
+                String harga = dataGridViewAddBarang.Rows[rows].Cells["hargaTotal"].Value.ToString();
+
+
+                String query_detail = "INSERT INTO d_beli(id_h_beli , id_barang , nota_pembelian , qty , sub_total , created_at , updated_at) " +
+                    "VALUES(@id_h_beli , @id_barang , @nota_pembelian , @qty , @sub_total , @created_at , @updated_at)";
+                MySqlCommand cmdDetail = new MySqlCommand(query_detail, conn);
+                cmdDetail.Parameters.AddWithValue("@id_h_beli", mx_id_beli);
+                cmdDetail.Parameters.AddWithValue("@id_barang", barang_id);
+                cmdDetail.Parameters.AddWithValue("@nota_pembelian", Note);
+                cmdDetail.Parameters.AddWithValue("@qty", qty);
+                cmdDetail.Parameters.AddWithValue("@sub_total", harga);
+                cmdDetail.Parameters.AddWithValue("@created_at", date_now);
+                cmdDetail.Parameters.AddWithValue("@updated_at", date_now);
+                cmdDetail.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+
+        private void dataGridViewDisplayPembelian_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                MessageBox.Show("asd");
+                return;
+            }
         }
     }
 }

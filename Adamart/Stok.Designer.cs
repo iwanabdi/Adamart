@@ -39,9 +39,6 @@ namespace Adamart
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttontmbktg = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttontmbbrg = new System.Windows.Forms.Button();
-            this.panel_atas = new System.Windows.Forms.Panel();
-            this.lbl_stok = new System.Windows.Forms.Label();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +47,9 @@ namespace Adamart
             this.Kategori = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stok_b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.buttontmbbrg = new System.Windows.Forms.Button();
+            this.panel_atas = new System.Windows.Forms.Panel();
+            this.lbl_stok = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -174,42 +174,6 @@ namespace Adamart
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // buttontmbbrg
-            // 
-            this.buttontmbbrg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
-            this.buttontmbbrg.FlatAppearance.BorderSize = 0;
-            this.buttontmbbrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttontmbbrg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttontmbbrg.ForeColor = System.Drawing.Color.White;
-            this.buttontmbbrg.Location = new System.Drawing.Point(14, 22);
-            this.buttontmbbrg.Name = "buttontmbbrg";
-            this.buttontmbbrg.Size = new System.Drawing.Size(130, 38);
-            this.buttontmbbrg.TabIndex = 6;
-            this.buttontmbbrg.Text = "Tambah Barang";
-            this.buttontmbbrg.UseVisualStyleBackColor = false;
-            this.buttontmbbrg.Click += new System.EventHandler(this.buttontmbbrg_Click);
-            // 
-            // panel_atas
-            // 
-            this.panel_atas.BackColor = System.Drawing.Color.Brown;
-            this.panel_atas.Controls.Add(this.lbl_stok);
-            this.panel_atas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_atas.ForeColor = System.Drawing.Color.White;
-            this.panel_atas.Location = new System.Drawing.Point(0, 0);
-            this.panel_atas.Name = "panel_atas";
-            this.panel_atas.Size = new System.Drawing.Size(800, 50);
-            this.panel_atas.TabIndex = 26;
-            // 
-            // lbl_stok
-            // 
-            this.lbl_stok.AutoSize = true;
-            this.lbl_stok.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_stok.Location = new System.Drawing.Point(12, 10);
-            this.lbl_stok.Name = "lbl_stok";
-            this.lbl_stok.Size = new System.Drawing.Size(196, 31);
-            this.lbl_stok.TabIndex = 0;
-            this.lbl_stok.Text = "Halaman Stok";
-            // 
             // no
             // 
             this.no.DataPropertyName = "no";
@@ -275,6 +239,42 @@ namespace Adamart
             this.edit.ReadOnly = true;
             this.edit.Text = "Edit";
             this.edit.UseColumnTextForButtonValue = true;
+            // 
+            // buttontmbbrg
+            // 
+            this.buttontmbbrg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.buttontmbbrg.FlatAppearance.BorderSize = 0;
+            this.buttontmbbrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttontmbbrg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttontmbbrg.ForeColor = System.Drawing.Color.White;
+            this.buttontmbbrg.Location = new System.Drawing.Point(14, 22);
+            this.buttontmbbrg.Name = "buttontmbbrg";
+            this.buttontmbbrg.Size = new System.Drawing.Size(130, 38);
+            this.buttontmbbrg.TabIndex = 6;
+            this.buttontmbbrg.Text = "Tambah Barang";
+            this.buttontmbbrg.UseVisualStyleBackColor = false;
+            this.buttontmbbrg.Click += new System.EventHandler(this.buttontmbbrg_Click);
+            // 
+            // panel_atas
+            // 
+            this.panel_atas.BackColor = System.Drawing.Color.Brown;
+            this.panel_atas.Controls.Add(this.lbl_stok);
+            this.panel_atas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_atas.ForeColor = System.Drawing.Color.White;
+            this.panel_atas.Location = new System.Drawing.Point(0, 0);
+            this.panel_atas.Name = "panel_atas";
+            this.panel_atas.Size = new System.Drawing.Size(800, 50);
+            this.panel_atas.TabIndex = 26;
+            // 
+            // lbl_stok
+            // 
+            this.lbl_stok.AutoSize = true;
+            this.lbl_stok.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stok.Location = new System.Drawing.Point(12, 10);
+            this.lbl_stok.Name = "lbl_stok";
+            this.lbl_stok.Size = new System.Drawing.Size(196, 31);
+            this.lbl_stok.TabIndex = 0;
+            this.lbl_stok.Text = "Halaman Stok";
             // 
             // Stok
             // 
