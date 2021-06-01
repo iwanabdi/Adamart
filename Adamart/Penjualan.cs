@@ -18,7 +18,7 @@ namespace Adamart
         {
             InitializeComponent();
             db = new koneksi();
-            getBarang();
+            //getBarang();
             getMaxNota();
         }
 
@@ -33,9 +33,9 @@ namespace Adamart
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,nama_barang FROM barang", conn);
             DataSet ds3 = new DataSet();
             da.Fill(ds3, "barang");
-            cbBarang.DataSource = ds3.Tables["barang"];
-            cbBarang.ValueMember = "id";
-            cbBarang.DisplayMember = "nama_barang";
+            //cbBarang.DataSource = ds3.Tables["barang"];
+            //cbBarang.ValueMember = "id";
+            //cbBarang.DisplayMember = "nama_barang";
             conn.Close();
         }
 
