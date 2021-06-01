@@ -27,16 +27,10 @@ namespace Adamart
 
         }
 
-        public void getBarang()
+        private void Cari_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(db.conn());
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id,nama_barang FROM barang", conn);
-            DataSet ds3 = new DataSet();
-            da.Fill(ds3, "barang");
-            //cbBarang.DataSource = ds3.Tables["barang"];
-            //cbBarang.ValueMember = "id";
-            //cbBarang.DisplayMember = "nama_barang";
-            conn.Close();
+            CariBarang cr = new CariBarang(this);
+            cr.ShowDialog();
         }
 
         public void getMaxNota()
@@ -51,6 +45,19 @@ namespace Adamart
                 string date = DateTime.UtcNow.ToString("yyyymmdd");
                 txtNota.Text = date + reader.GetString("total");
             }
+        }
+
+        public void isidatabrng(String id,String Barang, String Merk, String Harga)
+        {
+            txtbarang.Text = Barang;
+            txtharga.Text = Harga;
+            txtmerk.Text = Merk;
+            txtid.Text = id;
+        }
+
+        private void btncarimember_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
