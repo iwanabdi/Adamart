@@ -75,8 +75,8 @@ namespace Adamart
             }
             if (btn_save.Text == "Ubah")
             {
-                string Query = "update barang set harga_barang ='" + harga_barang + "'," +
-                    "where nama_barang = '" + nama_barang + "';";
+                string Query = "update barang set harga_barang ='" + harga_barang + "',nama_barang ='" + nama_barang + "',Merk ='" + merk + "',id_kategori ='" + kategori + "', updated_at=sysdate()" +
+                    "where id = '" + id + "';";
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
