@@ -29,8 +29,10 @@ namespace Adamart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcari = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewAddBarang = new System.Windows.Forms.DataGridView();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,23 +56,24 @@ namespace Adamart
             this.txtNota = new System.Windows.Forms.TextBox();
             this.panel_atas = new System.Windows.Forms.Panel();
             this.lbl_stok = new System.Windows.Forms.Label();
-            this.txtcari = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddBarang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).BeginInit();
             this.panel_atas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.txtcari);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.cbSupplier);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.dataGridViewAddBarang);
-            this.panel1.Controls.Add(this.cbSupplier);
             this.panel1.Controls.Add(this.dataGridViewDisplayPembelian);
             this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Controls.Add(this.label5);
@@ -80,20 +83,44 @@ namespace Adamart
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtNota);
-            this.panel1.Location = new System.Drawing.Point(0, 51);
+            this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 762);
+            this.panel1.Size = new System.Drawing.Size(800, 550);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtcari
+            // 
+            this.txtcari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcari.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcari.Location = new System.Drawing.Point(521, 18);
+            this.txtcari.Name = "txtcari";
+            this.txtcari.Size = new System.Drawing.Size(237, 25);
+            this.txtcari.TabIndex = 17;
+            this.txtcari.TextChanged += new System.EventHandler(this.txtcari_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Adamart.Properties.Resources.search_icon_png_9985_Windows;
+            this.pictureBox1.Location = new System.Drawing.Point(757, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(18, 700);
+            this.btnSave.Location = new System.Drawing.Point(0, 512);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(770, 30);
+            this.btnSave.Size = new System.Drawing.Size(800, 38);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -101,6 +128,10 @@ namespace Adamart
             // 
             // dataGridViewAddBarang
             // 
+            this.dataGridViewAddBarang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewAddBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAddBarang.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewAddBarang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewAddBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -111,9 +142,9 @@ namespace Adamart
             this.barang_id,
             this.qty,
             this.hargaTotal});
-            this.dataGridViewAddBarang.Location = new System.Drawing.Point(18, 444);
+            this.dataGridViewAddBarang.Location = new System.Drawing.Point(18, 307);
             this.dataGridViewAddBarang.Name = "dataGridViewAddBarang";
-            this.dataGridViewAddBarang.Size = new System.Drawing.Size(770, 241);
+            this.dataGridViewAddBarang.Size = new System.Drawing.Size(770, 199);
             this.dataGridViewAddBarang.TabIndex = 14;
             this.dataGridViewAddBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -157,6 +188,10 @@ namespace Adamart
             // 
             // dataGridViewDisplayPembelian
             // 
+            this.dataGridViewDisplayPembelian.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewDisplayPembelian.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDisplayPembelian.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewDisplayPembelian.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewDisplayPembelian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -164,10 +199,10 @@ namespace Adamart
             this.nota,
             this.nama_supplier,
             this.prove});
-            this.dataGridViewDisplayPembelian.Location = new System.Drawing.Point(338, 71);
+            this.dataGridViewDisplayPembelian.Location = new System.Drawing.Point(339, 61);
             this.dataGridViewDisplayPembelian.Name = "dataGridViewDisplayPembelian";
             this.dataGridViewDisplayPembelian.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDisplayPembelian.Size = new System.Drawing.Size(450, 367);
+            this.dataGridViewDisplayPembelian.Size = new System.Drawing.Size(450, 175);
             this.dataGridViewDisplayPembelian.TabIndex = 11;
             this.dataGridViewDisplayPembelian.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDisplayPembelian_CellClick);
             // 
@@ -185,12 +220,12 @@ namespace Adamart
             // 
             // prove
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.prove.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            this.prove.DefaultCellStyle = dataGridViewCellStyle17;
             this.prove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prove.HeaderText = "";
             this.prove.Name = "prove";
@@ -295,34 +330,11 @@ namespace Adamart
             this.lbl_stok.TabIndex = 0;
             this.lbl_stok.Text = "Halaman Pembelian";
             // 
-            // txtcari
-            // 
-            this.txtcari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtcari.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcari.Location = new System.Drawing.Point(522, 30);
-            this.txtcari.Name = "txtcari";
-            this.txtcari.Size = new System.Drawing.Size(237, 25);
-            this.txtcari.TabIndex = 17;
-            this.txtcari.TextChanged += new System.EventHandler(this.txtcari_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Adamart.Properties.Resources.search_icon_png_9985_Windows;
-            this.pictureBox1.Location = new System.Drawing.Point(758, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // Pembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 813);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panel_atas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -331,11 +343,11 @@ namespace Adamart
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddBarang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDisplayPembelian)).EndInit();
             this.panel_atas.ResumeLayout(false);
             this.panel_atas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
