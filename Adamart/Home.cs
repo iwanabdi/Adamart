@@ -43,6 +43,18 @@ namespace Adamart
         private void Home_Load(object sender, EventArgs e)
         {
 
+            panel_button.Height = btn_penjualan.Height;
+            panel_button.Top = btn_penjualan.Top;
+            panel_pembelian.Visible = false;
+            panel_penjualan.Visible = true;
+            panel_stok.Visible = false;
+            panel_admin.Visible = false;
+            panel_report.Visible = false;
+            panel_supplier.Visible = false;
+            Penjualan page_penjualan = new Penjualan();
+            page_penjualan.TopLevel = false;
+            panel_penjualan.Controls.Add(page_penjualan);
+            page_penjualan.Show();
         }
 
         private void btn_pembelian_Click(object sender, EventArgs e)
