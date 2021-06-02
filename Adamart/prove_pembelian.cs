@@ -61,7 +61,7 @@ namespace Adamart
                 update_stok.ExecuteNonQuery();
                 conn.Close();
             }
-            
+            this.Close();
 
 
         }
