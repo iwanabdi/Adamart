@@ -29,66 +29,72 @@ namespace Adamart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtbayar = new System.Windows.Forms.NumericUpDown();
+            this.numqty = new System.Windows.Forms.NumericUpDown();
+            this.txtkembali = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtnettotal = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtdiscount = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtnamamember = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtidmember = new System.Windows.Forms.TextBox();
+            this.btncarimember = new System.Windows.Forms.Button();
+            this.txtharga = new System.Windows.Forms.TextBox();
+            this.txtmerk = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.txtbarang = new System.Windows.Forms.TextBox();
             this.Cari = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.upQty = new System.Windows.Forms.DomainUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewpenjualan = new System.Windows.Forms.DataGridView();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kategori = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtmerk = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtharga = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btncarimember = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbayar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numqty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewpenjualan)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtbayar);
+            this.panel1.Controls.Add(this.numqty);
+            this.panel1.Controls.Add(this.txtkembali);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.btnsave);
-            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtnettotal);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.txtdiscount);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtnamamember);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtidmember);
             this.panel1.Controls.Add(this.btncarimember);
             this.panel1.Controls.Add(this.txtharga);
             this.panel1.Controls.Add(this.txtmerk);
@@ -100,18 +106,198 @@ namespace Adamart
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.upQty);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtNota);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewpenjualan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // txtbayar
+            // 
+            this.txtbayar.Location = new System.Drawing.Point(523, 163);
+            this.txtbayar.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.txtbayar.Name = "txtbayar";
+            this.txtbayar.Size = new System.Drawing.Size(172, 20);
+            this.txtbayar.TabIndex = 39;
+            this.txtbayar.ValueChanged += new System.EventHandler(this.txtbayar_TextChanged);
+            // 
+            // numqty
+            // 
+            this.numqty.Location = new System.Drawing.Point(104, 175);
+            this.numqty.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numqty.Name = "numqty";
+            this.numqty.Size = new System.Drawing.Size(192, 20);
+            this.numqty.TabIndex = 38;
+            // 
+            // txtkembali
+            // 
+            this.txtkembali.Location = new System.Drawing.Point(523, 191);
+            this.txtkembali.Name = "txtkembali";
+            this.txtkembali.ReadOnly = true;
+            this.txtkembali.Size = new System.Drawing.Size(172, 20);
+            this.txtkembali.TabIndex = 37;
+            this.txtkembali.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(428, 185);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 25);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Kembali";
+            // 
+            // btnsave
+            // 
+            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.Location = new System.Drawing.Point(701, 121);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(87, 75);
+            this.btnsave.TabIndex = 35;
+            this.btnsave.Text = "SAVE";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(449, 160);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 25);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Bayar";
+            // 
+            // txtnettotal
+            // 
+            this.txtnettotal.Location = new System.Drawing.Point(523, 139);
+            this.txtnettotal.Name = "txtnettotal";
+            this.txtnettotal.ReadOnly = true;
+            this.txtnettotal.Size = new System.Drawing.Size(172, 20);
+            this.txtnettotal.TabIndex = 32;
+            this.txtnettotal.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(418, 135);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 25);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Net Total";
+            // 
+            // txtdiscount
+            // 
+            this.txtdiscount.Location = new System.Drawing.Point(523, 113);
+            this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.ReadOnly = true;
+            this.txtdiscount.Size = new System.Drawing.Size(172, 20);
+            this.txtdiscount.TabIndex = 32;
+            this.txtdiscount.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(421, 110);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 25);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Discount";
+            // 
+            // txttotal
+            // 
+            this.txttotal.Location = new System.Drawing.Point(523, 87);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
+            this.txttotal.Size = new System.Drawing.Size(172, 20);
+            this.txttotal.TabIndex = 30;
+            this.txttotal.Text = "0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(457, 81);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 25);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Total";
+            // 
+            // txtnamamember
+            // 
+            this.txtnamamember.Location = new System.Drawing.Point(556, 39);
+            this.txtnamamember.Name = "txtnamamember";
+            this.txtnamamember.ReadOnly = true;
+            this.txtnamamember.Size = new System.Drawing.Size(151, 20);
+            this.txtnamamember.TabIndex = 28;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(402, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 25);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Nama Member";
+            // 
+            // txtidmember
+            // 
+            this.txtidmember.Location = new System.Drawing.Point(556, 14);
+            this.txtidmember.Name = "txtidmember";
+            this.txtidmember.Size = new System.Drawing.Size(151, 20);
+            this.txtidmember.TabIndex = 26;
+            // 
+            // btncarimember
+            // 
+            this.btncarimember.Location = new System.Drawing.Point(713, 12);
+            this.btncarimember.Name = "btncarimember";
+            this.btncarimember.Size = new System.Drawing.Size(75, 23);
+            this.btncarimember.TabIndex = 25;
+            this.btncarimember.Text = "Cari Member";
+            this.btncarimember.UseVisualStyleBackColor = true;
+            this.btncarimember.Click += new System.EventHandler(this.btncarimember_Click);
+            // 
+            // txtharga
+            // 
+            this.txtharga.Location = new System.Drawing.Point(104, 150);
+            this.txtharga.Name = "txtharga";
+            this.txtharga.ReadOnly = true;
+            this.txtharga.Size = new System.Drawing.Size(192, 20);
+            this.txtharga.TabIndex = 24;
+            // 
+            // txtmerk
+            // 
+            this.txtmerk.Location = new System.Drawing.Point(104, 124);
+            this.txtmerk.Name = "txtmerk";
+            this.txtmerk.ReadOnly = true;
+            this.txtmerk.Size = new System.Drawing.Size(192, 20);
+            this.txtmerk.TabIndex = 24;
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(105, 72);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(192, 20);
+            this.txtid.TabIndex = 24;
             // 
             // txtbarang
             // 
@@ -142,6 +328,16 @@ namespace Adamart
             this.btnTambah.UseVisualStyleBackColor = true;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 147);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 25);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Harga";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -152,12 +348,25 @@ namespace Adamart
             this.label5.TabIndex = 20;
             this.label5.Text = "Qty";
             // 
-            // upQty
+            // label6
             // 
-            this.upQty.Location = new System.Drawing.Point(104, 176);
-            this.upQty.Name = "upQty";
-            this.upQty.Size = new System.Drawing.Size(192, 20);
-            this.upQty.TabIndex = 19;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 25);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Merk";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 25);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "ID";
             // 
             // label4
             // 
@@ -173,7 +382,7 @@ namespace Adamart
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(429, 39);
+            this.label3.Location = new System.Drawing.Point(441, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 25);
             this.label3.TabIndex = 17;
@@ -197,64 +406,63 @@ namespace Adamart
             this.txtNota.Size = new System.Drawing.Size(192, 20);
             this.txtNota.TabIndex = 14;
             // 
-            // dataGridView1
+            // dataGridViewpenjualan
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewpenjualan.AllowUserToAddRows = false;
+            this.dataGridViewpenjualan.AllowUserToDeleteRows = false;
+            this.dataGridViewpenjualan.AllowUserToResizeColumns = false;
+            this.dataGridViewpenjualan.AllowUserToResizeRows = false;
+            this.dataGridViewpenjualan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewpenjualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewpenjualan.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewpenjualan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewpenjualan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewpenjualan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewpenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewpenjualan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.no,
             this.Id,
             this.nama_barang,
             this.Merk,
-            this.Kategori,
             this.harga_barang,
             this.Jumlah,
             this.Subtotal});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.GridColor = System.Drawing.Color.RosyBrown;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 226);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 212);
-            this.dataGridView1.TabIndex = 2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewpenjualan.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewpenjualan.GridColor = System.Drawing.Color.RosyBrown;
+            this.dataGridViewpenjualan.Location = new System.Drawing.Point(12, 226);
+            this.dataGridViewpenjualan.MultiSelect = false;
+            this.dataGridViewpenjualan.Name = "dataGridViewpenjualan";
+            this.dataGridViewpenjualan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewpenjualan.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewpenjualan.RowHeadersVisible = false;
+            this.dataGridViewpenjualan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewpenjualan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewpenjualan.ShowEditingIcon = false;
+            this.dataGridViewpenjualan.Size = new System.Drawing.Size(776, 212);
+            this.dataGridViewpenjualan.TabIndex = 2;
             // 
             // no
             // 
@@ -277,11 +485,6 @@ namespace Adamart
             this.Merk.HeaderText = "Merk";
             this.Merk.Name = "Merk";
             // 
-            // Kategori
-            // 
-            this.Kategori.HeaderText = "Kategori";
-            this.Kategori.Name = "Kategori";
-            // 
             // harga_barang
             // 
             this.harga_barang.HeaderText = "Harga Barang";
@@ -302,183 +505,11 @@ namespace Adamart
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Penjualan";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 25);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Merk";
-            // 
-            // txtmerk
-            // 
-            this.txtmerk.Location = new System.Drawing.Point(104, 124);
-            this.txtmerk.Name = "txtmerk";
-            this.txtmerk.ReadOnly = true;
-            this.txtmerk.Size = new System.Drawing.Size(192, 20);
-            this.txtmerk.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 147);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 25);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Harga";
-            // 
-            // txtharga
-            // 
-            this.txtharga.Location = new System.Drawing.Point(104, 150);
-            this.txtharga.Name = "txtharga";
-            this.txtharga.ReadOnly = true;
-            this.txtharga.Size = new System.Drawing.Size(192, 20);
-            this.txtharga.TabIndex = 24;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 25);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.Location = new System.Drawing.Point(105, 72);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(192, 20);
-            this.txtid.TabIndex = 24;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(544, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(151, 20);
-            this.textBox1.TabIndex = 26;
-            // 
-            // btncarimember
-            // 
-            this.btncarimember.Location = new System.Drawing.Point(701, 41);
-            this.btncarimember.Name = "btncarimember";
-            this.btncarimember.Size = new System.Drawing.Size(75, 23);
-            this.btncarimember.TabIndex = 25;
-            this.btncarimember.Text = "Cari Member";
-            this.btncarimember.UseVisualStyleBackColor = true;
-            this.btncarimember.Click += new System.EventHandler(this.btncarimember_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(544, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 28;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(390, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 25);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Nama Member";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(523, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(457, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 25);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Total";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(523, 139);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 32;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(433, 136);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 25);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Discont";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(523, 165);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(172, 20);
-            this.textBox5.TabIndex = 34;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(449, 160);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 25);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Bayar";
-            // 
-            // btnsave
-            // 
-            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(701, 121);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(87, 75);
-            this.btnsave.TabIndex = 35;
-            this.btnsave.Text = "SAVE";
-            this.btnsave.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(523, 191);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(172, 20);
-            this.textBox6.TabIndex = 37;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(428, 185);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 25);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Kembali";
             // 
             // Penjualan
             // 
@@ -492,7 +523,9 @@ namespace Adamart
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbayar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numqty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewpenjualan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,18 +534,9 @@ namespace Adamart
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn no;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Merk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kategori;
-        private System.Windows.Forms.DataGridViewTextBoxColumn harga_barang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.DataGridView dataGridViewpenjualan;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DomainUpDown upQty;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -525,18 +549,28 @@ namespace Adamart
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtnamamember;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtidmember;
         private System.Windows.Forms.Button btncarimember;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtkembali;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnsave;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtdiscount;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Merk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn harga_barang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.NumericUpDown numqty;
+        private System.Windows.Forms.TextBox txtnettotal;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown txtbayar;
     }
 }
