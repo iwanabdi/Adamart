@@ -160,9 +160,9 @@ namespace Adamart
                     after =int.Parse(stoknow) - int.Parse(dataGridViewpenjualan[4, i].Value.ToString());
                     //MessageBox.Show(after + "");
 
-                    if (after < 0)
+                    if (after < 0 || int.Parse(txtkembali.Text) < 0 )
                     {
-                        MessageBox.Show("Stok Kurang");
+                        MessageBox.Show("Stok Kurang / Bayar kurang");
                         return;
                     }
                     else

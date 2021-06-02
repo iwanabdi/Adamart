@@ -53,6 +53,7 @@ namespace Adamart
             // 
             // txtnama
             // 
+            this.txtnama.Enabled = false;
             this.txtnama.Location = new System.Drawing.Point(15, 84);
             this.txtnama.Name = "txtnama";
             this.txtnama.Size = new System.Drawing.Size(373, 20);
@@ -133,6 +134,7 @@ namespace Adamart
             // 
             // cbkategori
             // 
+            this.cbkategori.Enabled = false;
             this.cbkategori.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cbkategori.FormattingEnabled = true;
             this.cbkategori.Location = new System.Drawing.Point(15, 243);
@@ -162,6 +164,7 @@ namespace Adamart
             // 
             // txtmerk
             // 
+            this.txtmerk.Enabled = false;
             this.txtmerk.Location = new System.Drawing.Point(15, 190);
             this.txtmerk.Name = "txtmerk";
             this.txtmerk.Size = new System.Drawing.Size(373, 20);

@@ -60,7 +60,7 @@ namespace Adamart
             // 
             // txt_email
             // 
-            this.txt_email.BackColor = System.Drawing.Color.Linen;
+            this.txt_email.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.Black;
@@ -72,7 +72,7 @@ namespace Adamart
             // 
             // txt_pass
             // 
-            this.txt_pass.BackColor = System.Drawing.Color.Linen;
+            this.txt_pass.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.Black;

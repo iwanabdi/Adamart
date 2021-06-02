@@ -89,7 +89,7 @@ namespace Adamart
             this.btn_supplier.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_supplier.Image = global::Adamart.Properties.Resources.icons8_supplier_24;
             this.btn_supplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_supplier.Location = new System.Drawing.Point(0, 364);
+            this.btn_supplier.Location = new System.Drawing.Point(0, 308);
             this.btn_supplier.Name = "btn_supplier";
             this.btn_supplier.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_supplier.Size = new System.Drawing.Size(200, 50);
@@ -169,7 +169,7 @@ namespace Adamart
             this.btn_report.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_report.Image = global::Adamart.Properties.Resources.icons8_report_file_24;
             this.btn_report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_report.Location = new System.Drawing.Point(0, 308);
+            this.btn_report.Location = new System.Drawing.Point(0, 420);
             this.btn_report.Name = "btn_report";
             this.btn_report.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_report.Size = new System.Drawing.Size(200, 50);
@@ -178,6 +178,7 @@ namespace Adamart
             this.btn_report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_report.UseVisualStyleBackColor = false;
+            this.btn_report.Visible = false;
             this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
             // 
             // btn_admin
@@ -189,7 +190,7 @@ namespace Adamart
             this.btn_admin.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_admin.Image = global::Adamart.Properties.Resources.icons8_admin_settings_male_24;
             this.btn_admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_admin.Location = new System.Drawing.Point(3, 420);
+            this.btn_admin.Location = new System.Drawing.Point(0, 364);
             this.btn_admin.Name = "btn_admin";
             this.btn_admin.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_admin.Size = new System.Drawing.Size(200, 50);

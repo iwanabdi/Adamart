@@ -29,7 +29,7 @@ namespace Adamart
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtcari = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -128,6 +128,10 @@ namespace Adamart
             // 
             // dataGridViewAddBarang
             // 
+            this.dataGridViewAddBarang.AllowUserToAddRows = false;
+            this.dataGridViewAddBarang.AllowUserToDeleteRows = false;
+            this.dataGridViewAddBarang.AllowUserToResizeColumns = false;
+            this.dataGridViewAddBarang.AllowUserToResizeRows = false;
             this.dataGridViewAddBarang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -144,6 +148,7 @@ namespace Adamart
             this.hargaTotal});
             this.dataGridViewAddBarang.Location = new System.Drawing.Point(18, 307);
             this.dataGridViewAddBarang.Name = "dataGridViewAddBarang";
+            this.dataGridViewAddBarang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAddBarang.Size = new System.Drawing.Size(770, 199);
             this.dataGridViewAddBarang.TabIndex = 14;
             this.dataGridViewAddBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -188,6 +193,10 @@ namespace Adamart
             // 
             // dataGridViewDisplayPembelian
             // 
+            this.dataGridViewDisplayPembelian.AllowUserToAddRows = false;
+            this.dataGridViewDisplayPembelian.AllowUserToDeleteRows = false;
+            this.dataGridViewDisplayPembelian.AllowUserToResizeColumns = false;
+            this.dataGridViewDisplayPembelian.AllowUserToResizeRows = false;
             this.dataGridViewDisplayPembelian.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -220,12 +229,12 @@ namespace Adamart
             // 
             // prove
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            this.prove.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.prove.DefaultCellStyle = dataGridViewCellStyle4;
             this.prove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prove.HeaderText = "";
             this.prove.Name = "prove";
