@@ -61,7 +61,6 @@ namespace Adamart
             this.label2 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.dataGridViewpenjualan = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +68,7 @@ namespace Adamart
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hapus = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtbayar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numqty)).BeginInit();
@@ -77,6 +77,9 @@ namespace Adamart
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.cbmember);
             this.panel1.Controls.Add(this.txtbayar);
             this.panel1.Controls.Add(this.numqty);
@@ -124,7 +127,7 @@ namespace Adamart
             // 
             // txtbayar
             // 
-            this.txtbayar.Location = new System.Drawing.Point(523, 163);
+            this.txtbayar.Location = new System.Drawing.Point(527, 150);
             this.txtbayar.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -149,7 +152,7 @@ namespace Adamart
             // 
             // txtkembali
             // 
-            this.txtkembali.Location = new System.Drawing.Point(523, 191);
+            this.txtkembali.Location = new System.Drawing.Point(527, 178);
             this.txtkembali.Name = "txtkembali";
             this.txtkembali.ReadOnly = true;
             this.txtkembali.Size = new System.Drawing.Size(172, 20);
@@ -160,7 +163,7 @@ namespace Adamart
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(428, 185);
+            this.label13.Location = new System.Drawing.Point(432, 172);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 25);
             this.label13.TabIndex = 36;
@@ -169,7 +172,7 @@ namespace Adamart
             // btnsave
             // 
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(701, 121);
+            this.btnsave.Location = new System.Drawing.Point(705, 108);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(87, 75);
             this.btnsave.TabIndex = 35;
@@ -181,7 +184,7 @@ namespace Adamart
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(449, 160);
+            this.label12.Location = new System.Drawing.Point(453, 147);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 25);
             this.label12.TabIndex = 33;
@@ -189,7 +192,7 @@ namespace Adamart
             // 
             // txtnettotal
             // 
-            this.txtnettotal.Location = new System.Drawing.Point(523, 139);
+            this.txtnettotal.Location = new System.Drawing.Point(527, 126);
             this.txtnettotal.Name = "txtnettotal";
             this.txtnettotal.ReadOnly = true;
             this.txtnettotal.Size = new System.Drawing.Size(172, 20);
@@ -200,7 +203,7 @@ namespace Adamart
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(418, 135);
+            this.label14.Location = new System.Drawing.Point(422, 122);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 25);
             this.label14.TabIndex = 31;
@@ -208,7 +211,7 @@ namespace Adamart
             // 
             // txtdiscount
             // 
-            this.txtdiscount.Location = new System.Drawing.Point(523, 113);
+            this.txtdiscount.Location = new System.Drawing.Point(527, 100);
             this.txtdiscount.Name = "txtdiscount";
             this.txtdiscount.ReadOnly = true;
             this.txtdiscount.Size = new System.Drawing.Size(172, 20);
@@ -219,7 +222,7 @@ namespace Adamart
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(421, 110);
+            this.label11.Location = new System.Drawing.Point(425, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 25);
             this.label11.TabIndex = 31;
@@ -227,7 +230,7 @@ namespace Adamart
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(523, 87);
+            this.txttotal.Location = new System.Drawing.Point(527, 74);
             this.txttotal.Name = "txttotal";
             this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(172, 20);
@@ -238,7 +241,7 @@ namespace Adamart
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(457, 81);
+            this.label10.Location = new System.Drawing.Point(461, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 25);
             this.label10.TabIndex = 29;
@@ -434,16 +437,6 @@ namespace Adamart
             this.dataGridViewpenjualan.TabIndex = 2;
             this.dataGridViewpenjualan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpenjualan_CellContentClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Penjualan";
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "id";
@@ -489,6 +482,16 @@ namespace Adamart
             this.Hapus.ReadOnly = true;
             this.Hapus.Text = "Hapus";
             this.Hapus.UseColumnTextForButtonValue = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Penjualan";
             // 
             // Penjualan
             // 
