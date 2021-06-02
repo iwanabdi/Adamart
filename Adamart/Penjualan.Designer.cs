@@ -33,6 +33,7 @@ namespace Adamart
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbmember = new System.Windows.Forms.CheckBox();
             this.txtbayar = new System.Windows.Forms.NumericUpDown();
             this.numqty = new System.Windows.Forms.NumericUpDown();
             this.txtkembali = new System.Windows.Forms.TextBox();
@@ -45,10 +46,6 @@ namespace Adamart
             this.label11 = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtnamamember = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtidmember = new System.Windows.Forms.TextBox();
-            this.btncarimember = new System.Windows.Forms.Button();
             this.txtharga = new System.Windows.Forms.TextBox();
             this.txtmerk = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
@@ -64,14 +61,14 @@ namespace Adamart
             this.label2 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.dataGridViewpenjualan = new System.Windows.Forms.DataGridView();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Hapus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtbayar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numqty)).BeginInit();
@@ -80,6 +77,7 @@ namespace Adamart
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbmember);
             this.panel1.Controls.Add(this.txtbayar);
             this.panel1.Controls.Add(this.numqty);
             this.panel1.Controls.Add(this.txtkembali);
@@ -92,10 +90,6 @@ namespace Adamart
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtnamamember);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtidmember);
-            this.panel1.Controls.Add(this.btncarimember);
             this.panel1.Controls.Add(this.txtharga);
             this.panel1.Controls.Add(this.txtmerk);
             this.panel1.Controls.Add(this.txtid);
@@ -117,6 +111,16 @@ namespace Adamart
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // cbmember
+            // 
+            this.cbmember.AutoSize = true;
+            this.cbmember.Location = new System.Drawing.Point(538, 17);
+            this.cbmember.Name = "cbmember";
+            this.cbmember.Size = new System.Drawing.Size(44, 17);
+            this.cbmember.TabIndex = 40;
+            this.cbmember.Text = "Yes";
+            this.cbmember.UseVisualStyleBackColor = true;
             // 
             // txtbayar
             // 
@@ -240,41 +244,6 @@ namespace Adamart
             this.label10.TabIndex = 29;
             this.label10.Text = "Total";
             // 
-            // txtnamamember
-            // 
-            this.txtnamamember.Location = new System.Drawing.Point(556, 39);
-            this.txtnamamember.Name = "txtnamamember";
-            this.txtnamamember.ReadOnly = true;
-            this.txtnamamember.Size = new System.Drawing.Size(151, 20);
-            this.txtnamamember.TabIndex = 28;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(402, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 25);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Nama Member";
-            // 
-            // txtidmember
-            // 
-            this.txtidmember.Location = new System.Drawing.Point(556, 14);
-            this.txtidmember.Name = "txtidmember";
-            this.txtidmember.Size = new System.Drawing.Size(151, 20);
-            this.txtidmember.TabIndex = 26;
-            // 
-            // btncarimember
-            // 
-            this.btncarimember.Location = new System.Drawing.Point(713, 12);
-            this.btncarimember.Name = "btncarimember";
-            this.btncarimember.Size = new System.Drawing.Size(75, 23);
-            this.btncarimember.TabIndex = 25;
-            this.btncarimember.Text = "Cari Member";
-            this.btncarimember.UseVisualStyleBackColor = true;
-            this.btncarimember.Click += new System.EventHandler(this.btncarimember_Click);
-            // 
             // txtharga
             // 
             this.txtharga.Location = new System.Drawing.Point(104, 150);
@@ -384,9 +353,9 @@ namespace Adamart
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(441, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 25);
+            this.label3.Size = new System.Drawing.Size(90, 25);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Id Member";
+            this.label3.Text = "Member";
             // 
             // label2
             // 
@@ -429,13 +398,13 @@ namespace Adamart
             this.dataGridViewpenjualan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewpenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewpenjualan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.no,
             this.Id,
             this.nama_barang,
             this.Merk,
             this.harga_barang,
             this.Jumlah,
-            this.Subtotal});
+            this.Subtotal,
+            this.Hapus});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -463,43 +432,7 @@ namespace Adamart
             this.dataGridViewpenjualan.ShowEditingIcon = false;
             this.dataGridViewpenjualan.Size = new System.Drawing.Size(776, 212);
             this.dataGridViewpenjualan.TabIndex = 2;
-            // 
-            // no
-            // 
-            this.no.HeaderText = "#";
-            this.no.Name = "no";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "ID Barang";
-            this.Id.Name = "Id";
-            // 
-            // nama_barang
-            // 
-            this.nama_barang.HeaderText = "Nama Barang";
-            this.nama_barang.Name = "nama_barang";
-            // 
-            // Merk
-            // 
-            this.Merk.HeaderText = "Merk";
-            this.Merk.Name = "Merk";
-            // 
-            // harga_barang
-            // 
-            this.harga_barang.HeaderText = "Harga Barang";
-            this.harga_barang.Name = "harga_barang";
-            // 
-            // Jumlah
-            // 
-            this.Jumlah.HeaderText = "Jumlah";
-            this.Jumlah.Name = "Jumlah";
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "SubTotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
+            this.dataGridViewpenjualan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpenjualan_CellContentClick);
             // 
             // label1
             // 
@@ -510,6 +443,52 @@ namespace Adamart
             this.label1.Size = new System.Drawing.Size(143, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Penjualan";
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "ID Barang";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // nama_barang
+            // 
+            this.nama_barang.HeaderText = "Nama Barang";
+            this.nama_barang.Name = "nama_barang";
+            this.nama_barang.ReadOnly = true;
+            // 
+            // Merk
+            // 
+            this.Merk.HeaderText = "Merk";
+            this.Merk.Name = "Merk";
+            this.Merk.ReadOnly = true;
+            // 
+            // harga_barang
+            // 
+            this.harga_barang.HeaderText = "Harga Barang";
+            this.harga_barang.Name = "harga_barang";
+            this.harga_barang.ReadOnly = true;
+            // 
+            // Jumlah
+            // 
+            this.Jumlah.HeaderText = "Jumlah";
+            this.Jumlah.Name = "Jumlah";
+            this.Jumlah.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "SubTotal";
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // Hapus
+            // 
+            this.Hapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Hapus.HeaderText = "";
+            this.Hapus.Name = "Hapus";
+            this.Hapus.ReadOnly = true;
+            this.Hapus.Text = "Hapus";
+            this.Hapus.UseColumnTextForButtonValue = true;
             // 
             // Penjualan
             // 
@@ -549,10 +528,6 @@ namespace Adamart
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtnamamember;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtidmember;
-        private System.Windows.Forms.Button btncarimember;
         private System.Windows.Forms.TextBox txtkembali;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnsave;
@@ -561,16 +536,17 @@ namespace Adamart
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn no;
+        private System.Windows.Forms.NumericUpDown numqty;
+        private System.Windows.Forms.TextBox txtnettotal;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown txtbayar;
+        private System.Windows.Forms.CheckBox cbmember;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_barang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Merk;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga_barang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.NumericUpDown numqty;
-        private System.Windows.Forms.TextBox txtnettotal;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown txtbayar;
+        private System.Windows.Forms.DataGridViewButtonColumn Hapus;
     }
 }

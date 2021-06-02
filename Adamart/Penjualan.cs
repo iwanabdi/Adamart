@@ -36,25 +36,23 @@ namespace Adamart
                 String subtotal = numqty.Value * int.Parse(txtharga.Text) + "";
                 DataGridViewRow newRow = new DataGridViewRow();
                 newRow.CreateCells(dataGridViewpenjualan);
-                newRow.Cells[0].Value = dataGridViewpenjualan.Rows.Count + 1.ToString();
-                newRow.Cells[1].Value = txtid.Text;
-                newRow.Cells[2].Value = txtbarang.Text;
-                newRow.Cells[3].Value = txtmerk.Text;
-                newRow.Cells[4].Value = txtharga.Text;
-                newRow.Cells[5].Value = numqty.Value;
-                newRow.Cells[6].Value = subtotal;
+                newRow.Cells[0].Value = txtid.Text;
+                newRow.Cells[1].Value = txtbarang.Text;
+                newRow.Cells[2].Value = txtmerk.Text;
+                newRow.Cells[3].Value = txtharga.Text;
+                newRow.Cells[4].Value = numqty.Value;
+                newRow.Cells[5].Value = subtotal;
                 dataGridViewpenjualan.Rows.Add(newRow);
 
                 txttotal.Text = int.Parse(txttotal.Text) + int.Parse(subtotal) + "";
 
-
-                if (txtidmember.TextLength == 0)
+                if (cbmember.Checked == true)
                 {
-                    txtdiscount.Text = 0 + "";
+                   txtdiscount.Text = (int.Parse(txttotal.Text) * 0.05) + "";
                 }
                 else
                 {
-                    txtdiscount.Text = (int.Parse(txttotal.Text) * 0.05)+"";
+                    txtdiscount.Text = 0 + "";
                 }
 
                 txtnettotal.Text = int.Parse(txttotal.Text) - int.Parse(txtdiscount.Text) + "";
@@ -70,6 +68,16 @@ namespace Adamart
             txtharga.Text = "";
             txtmerk.Text = "";
             numqty.Value = 0;
+        }
+
+        public void marisave()
+        {
+            clearisi();
+            txttotal.Text = 0 + "";
+            txtnettotal.Text = 0+"";
+            txtdiscount.Text = 0+"";
+            txtbayar.Text = 0+"";
+            txtkembali.Text = 0+"";
         }
 
         private void Cari_Click(object sender, EventArgs e)
@@ -138,10 +146,16 @@ namespace Adamart
                     cmd1.CommandText = "insert into d_jual(id_barang,id_h_jual,qty,sub_total,created_at) values(@id_barang,@id_h_jual,@qty,@sub_total,sysdate())";
                     cmd1.Connection = conn;
                     cmd1.Parameters.AddWithValue("@id_h_jual", txtNota.Text);
-                    cmd1.Parameters.AddWithValue("@id_barang", dataGridViewpenjualan[1,i].Value);
-                    cmd1.Parameters.AddWithValue("@qty", dataGridViewpenjualan[5,i].Value);
-                    cmd1.Parameters.AddWithValue("@sub_total", dataGridViewpenjualan[4,i].Value);
+                    cmd1.Parameters.AddWithValue("@id_barang", dataGridViewpenjualan[0,i].Value);
+                    cmd1.Parameters.AddWithValue("@qty", dataGridViewpenjualan[4,i].Value);
+                    cmd1.Parameters.AddWithValue("@sub_total", dataGridViewpenjualan[3,i].Value);
                     cmd1.ExecuteNonQuery();
+
+                    MySqlCommand cmd2 = new MySqlCommand();
+                    cmd2.CommandText = "update barang set stok=)";
+                    cmd2.Connection = conn;
+                    cmd2.ExecuteNonQuery();
+
                 }
 
                 trans.Commit();
@@ -153,5 +167,28 @@ namespace Adamart
                 trans.Rollback();
             }
         }
+
+        private void dataGridViewpenjualan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6)
+            {
+                //MessageBox.Show(dataGridViewpenjualan[4,e.RowIndex].Value.ToString())
+                txttotal.Text = (int.Parse(txttotal.Text) - int.Parse(dataGridViewpenjualan[5,e.RowIndex].Value.ToString())) + "";
+
+                if (cbmember.Checked == true)
+                {
+                    txtdiscount.Text = (int.Parse(txttotal.Text) * 0.05) + "";
+                }
+                else
+                {
+                    txtdiscount.Text = 0 + "";
+                }
+
+                txtnettotal.Text = int.Parse(txttotal.Text) - int.Parse(txtdiscount.Text) + "";
+                dataGridViewpenjualan.Rows.RemoveAt(e.RowIndex);
+                return;
+            }
+        }
+
     }
 }

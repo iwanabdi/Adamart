@@ -37,7 +37,8 @@ namespace Adamart
             ds.Tables.Clear();
             conn.Open();
             da = new MySqlDataAdapter("SELECT b.id,b.nama_barang,b.merk,b.harga_barang,b.stok FROM barang b " +
-                "left join kategori_barang k on b.id_kategori=k.id", conn);
+                "left join kategori_barang k on b.id_kategori=k.id " +
+                "WHERE b.stok>0", conn);
             da.Fill(ds, "barang");
             dataGridView1.DataSource = ds.Tables["barang"];
             conn.Close();
@@ -49,7 +50,8 @@ namespace Adamart
             conn.Open();
             da = new MySqlDataAdapter("SELECT b.id,b.nama_barang,b.merk,b.harga_barang,b.stok FROM barang b " +
                 "LEFT JOIN kategori_barang k ON b.id_kategori=k.id " +
-                "WHERE b.id LIKE '%" + txtcari.Text + "%'" +
+                "WHERE b.stok>0 AND " +
+                "b.id LIKE '%" + txtcari.Text + "%'" +
                 "OR b.nama_barang LIKE '%" + txtcari.Text + "%'" +
                 "OR b.merk LIKE '%" + txtcari.Text + "%'", conn);
             da.Fill(ds, "barang");
