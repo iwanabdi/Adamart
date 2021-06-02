@@ -14,7 +14,7 @@ namespace Adamart
     {
 
         Supplier page_supplier;
-        String id_login;
+        public String id_login;
         public Home(string nama_pegawai, string id, int jabatan)
         {
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace Adamart
             panel_admin.Visible = false;
             panel_report.Visible = false;
             panel_supplier.Visible = false;
-            Penjualan page_penjualan = new Penjualan();
+            Penjualan page_penjualan = new Penjualan(id_login);
             page_penjualan.TopLevel = false;
             panel_penjualan.Controls.Add(page_penjualan);
             page_penjualan.Show();
