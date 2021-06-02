@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Win32.SafeHandles;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,6 +99,7 @@ namespace Adamart
                 string date = DateTime.UtcNow.ToString("yyyymmdd");
                 txtNota.Text = date + reader.GetString("total");
             }
+            conn.Close();
         }
 
         public void isidatabrng(String id,String Barang, String Merk, String Harga)
@@ -151,15 +153,30 @@ namespace Adamart
                     cmd1.Parameters.AddWithValue("@sub_total", dataGridViewpenjualan[3,i].Value);
                     cmd1.ExecuteNonQuery();
 
-                    MySqlCommand cmd2 = new MySqlCommand();
-                    cmd2.CommandText = "update barang set stok=)";
-                    cmd2.Connection = conn;
-                    cmd2.ExecuteNonQuery();
+                    int after=-1;
+                    MySqlCommand cmdstok = new MySqlCommand("select stok from barang where id='" + dataGridViewpenjualan[0, i].Value + "'", conn);
+                    string stoknow = cmdstok.ExecuteScalar().ToString();
+                    //MessageBox.Show(stoknow);
+                    after =int.Parse(stoknow) - int.Parse(dataGridViewpenjualan[4, i].Value.ToString());
+                    //MessageBox.Show(after + "");
 
+                    if (after < 0)
+                    {
+                        MessageBox.Show("Stok Kurang");
+                        return;
+                    }
+                    else
+                    {
+                        MySqlCommand cmd2 = new MySqlCommand();
+                        cmd2.CommandText = "update barang set stok='"+after+"' where id='"+ dataGridViewpenjualan[0, i].Value + "'";
+                        cmd2.Connection = conn;
+                        cmd2.ExecuteNonQuery();
+                    }
                 }
 
                 trans.Commit();
                 MessageBox.Show("Berhasil");
+                conn.Close();
             }
             catch (Exception ex)
             {

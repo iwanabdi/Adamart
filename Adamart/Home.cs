@@ -51,7 +51,7 @@ namespace Adamart
             panel_admin.Visible = false;
             panel_report.Visible = false;
             panel_supplier.Visible = false;
-            Penjualan page_penjualan = new Penjualan();
+            Penjualan page_penjualan = new Penjualan(id_login);
             page_penjualan.TopLevel = false;
             panel_penjualan.Controls.Add(page_penjualan);
             page_penjualan.Show();
