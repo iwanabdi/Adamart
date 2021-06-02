@@ -177,6 +177,8 @@ namespace Adamart
                 trans.Commit();
                 MessageBox.Show("Berhasil");
                 conn.Close();
+                marisave();
+                dataGridViewpenjualan.Rows.Clear();
             }
             catch (Exception ex)
             {
