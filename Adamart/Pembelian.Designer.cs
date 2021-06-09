@@ -33,6 +33,7 @@ namespace Adamart
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtcari = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewAddBarang = new System.Windows.Forms.DataGridView();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,6 @@ namespace Adamart
             this.barang_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hargaTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.dataGridViewDisplayPembelian = new System.Windows.Forms.DataGridView();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +68,7 @@ namespace Adamart
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.txtcari);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -111,6 +112,14 @@ namespace Adamart
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // cbSupplier
+            // 
+            this.cbSupplier.FormattingEnabled = true;
+            this.cbSupplier.Location = new System.Drawing.Point(110, 114);
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.Size = new System.Drawing.Size(192, 21);
+            this.cbSupplier.TabIndex = 13;
             // 
             // btnSave
             // 
@@ -183,14 +192,6 @@ namespace Adamart
             this.hargaTotal.HeaderText = "Harga";
             this.hargaTotal.Name = "hargaTotal";
             // 
-            // cbSupplier
-            // 
-            this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(110, 114);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(192, 21);
-            this.cbSupplier.TabIndex = 13;
-            // 
             // dataGridViewDisplayPembelian
             // 
             this.dataGridViewDisplayPembelian.AllowUserToAddRows = false;
@@ -201,6 +202,7 @@ namespace Adamart
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewDisplayPembelian.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDisplayPembelian.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewDisplayPembelian.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewDisplayPembelian.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewDisplayPembelian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -208,6 +210,7 @@ namespace Adamart
             this.nota,
             this.nama_supplier,
             this.prove});
+            this.dataGridViewDisplayPembelian.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridViewDisplayPembelian.Location = new System.Drawing.Point(339, 61);
             this.dataGridViewDisplayPembelian.Name = "dataGridViewDisplayPembelian";
             this.dataGridViewDisplayPembelian.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
